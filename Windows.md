@@ -64,6 +64,17 @@ choco upgrade install motrix listen1 git git-lfs wget curl aria2 putty winscp \
     upx usbimager logseq snipaste -y
 ```
 
+### 软件配置
+
+安装配置wsl
+
+```powershell
+wsl --install
+wsl --update
+wsl --list --online
+wsl --set-default ubuntu-22.04
+```
+
 ### 逆向分析工具
 
 - **IDA Pro**（反汇编器）
