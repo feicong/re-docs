@@ -72,7 +72,7 @@ choco upgrade install motrix listen1 git git-lfs wget curl aria2 putty winscp \
 wsl --install
 wsl --update
 wsl --list --online
-wsl --set-default ubuntu-22.04
+wsl --set-default Ubuntu-22.04
 ```
 
 ### 逆向分析工具
@@ -95,12 +95,6 @@ wsl --set-default ubuntu-22.04
 
 ### 编程语言环境
 
-### 安装 Python
-
-```powershell
-winget install Python.Python.3
-```
-
 安装常见的安全研究库：
 
 ```powershell
@@ -116,15 +110,3 @@ pip install pwntools frida requests scapy capstone unicorn
 
 - **VMware Workstation** 或 **VirtualBox**。
 - 创建 **Windows 沙盒环境** 进行动态分析。
-
-### 启用 Windows Subsystem for Linux（WSL）
-
-```powershell
-wsl --install -d Ubuntu
-```
-
-安装常用工具：
-
-```bash
-sudo apt update && sudo apt install gdb ltrace strace binwalk
-```
