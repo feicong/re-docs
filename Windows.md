@@ -43,6 +43,27 @@ sc stop wuauserv
 
 ## 安全研究常用工具
 
+首先安装软件管理器chocolatey。
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+### 常用软件
+
+```powershell
+choco upgrade install motrix listen1 git git-lfs wget curl aria2 putty winscp \
+    python3 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome \
+    vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip diskgenius adobereader \
+    androidstudio openjdk notepadplusplus vlc nodejs nvm qemu angryip cmake dd fd xxd \
+    sysinternals ninja vim openssl jq powertoys go everything checksum typescript \
+    ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop \
+    plantuml scrcpy f.lux ghidra sudo base64 zstandad apktool patch gzip dos2unix 
+    upx usbimager logseq snipaste -y
+```
+
 ### 逆向分析工具
 
 - **IDA Pro**（反汇编器）
