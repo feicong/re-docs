@@ -242,7 +242,7 @@ brew install --cask cmake wireshark charles 1password disk-drill windows-app dis
     flutter oracle-jdk usbimager flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code \
     ghidra raspberry-pi-imager github vnc-viewer hiddenbar crescendo iina cryptomator itraffic tabby termius \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq telegram bilibili showyedge angry-ip-scanner \
-    iterm2 battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast \
+    iterm2 battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast reqable \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing
 
 brew install alienator88/homebrew-cask/sentinel-app
@@ -373,6 +373,8 @@ brew install alienator88/homebrew-cask/sentinel-app
 <img width="1090" alt="image" src="https://github.com/user-attachments/assets/c9cc9623-b001-4e92-a70e-e9b196a02729" />
 
 `raycast`用于替代官方的聚焦搜索，怪好用的。
+
+`reqable`是跨平台的网络抓包与API测试工具。
 
 `ios-app-signer`是IPA签名工具，只是自己买证书，真的贵。
 
