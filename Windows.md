@@ -53,15 +53,23 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ### 常用软件
 
+安装软件：
+
 ```powershell
-choco upgrade install motrix listen1 git git-lfs wget curl aria2 putty winscp \
+choco install motrix listen1 git git-lfs wget curl aria2 putty winscp \
     python3 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome \
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip diskgenius adobereader \
     androidstudio openjdk notepadplusplus vlc nodejs nvm qemu angryip cmake dd fd xxd \
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript \
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop \
     plantuml scrcpy f.lux ghidra sudo base64 zstandad apktool patch gzip dos2unix 
-    upx usbimager logseq snipaste -y
+    upx usbimager logseq snipaste gradle maven -y
+```
+
+更新软件：
+
+```
+choco upgrade all -y 
 ```
 
 ### 软件配置
