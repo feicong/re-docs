@@ -72,6 +72,8 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp \
 choco upgrade all -y 
 ```
 
+使用这个下载软件：https://neatdownload.com/
+
 ### 软件配置
 
 安装配置wsl
