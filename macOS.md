@@ -41,7 +41,7 @@ brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstream
     dbus-glib smali docker-completion make dtc dwarf mbedtls dwarfutils libedit sqlite libelf meson libevent \
     mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses \
     tesseract-lang freetype texinfo libimobiledevice ninja gawk libimobiledevice-glue node npm tree gcc u-boot-tools \
-    gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 nvm unzip libnghttp3 vala libnice vala-language-server git \
+    gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 nvm unzip libnghttp3 vala libnice vala-language-server git git-lfs \
     glib openjdk vim glib-networking openjdk webp libpcap openjpeg wget gnu-sed libplist openssl@1.1 gnupg \
     libpng openssl@3 x264 gnutls libpsl x265 go gobject-introspection pango xz googletest pcre2 youtube-dl gost perl \
     yt-dlp gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx ollama
