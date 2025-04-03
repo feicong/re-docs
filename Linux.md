@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 ### 安装必备工具
 
 ```bash
-sudo apt install -y git curl wget unzip zip build-essential cmake python3 python3-pip openjdk-17-jdk
+sudo apt install -y git curl wget unzip zip build-essential cmake python3 python3-pip openjdk-17-jdk upx
 ```
 
 ### 设置Python环境
