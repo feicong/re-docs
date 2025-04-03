@@ -44,7 +44,7 @@ brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstream
     gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 nvm unzip libnghttp3 vala libnice vala-language-server git git-lfs \
     glib openjdk vim glib-networking openjdk webp libpcap openjpeg wget gnu-sed libplist openssl@1.1 gnupg \
     libpng openssl@3 x264 gnutls libpsl x265 go gobject-introspection pango xz googletest pcre2 youtube-dl gost perl \
-    yt-dlp gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx ollama
+    yt-dlp gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx ollama grpcurl
 ```
 
 `graphviz`与`plantuml`画图必备。
