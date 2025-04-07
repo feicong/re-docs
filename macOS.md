@@ -243,7 +243,7 @@ brew install --cask cmake wireshark charles 1password disk-drill windows-app dis
     ghidra raspberry-pi-imager github vnc-viewer hiddenbar crescendo iina cryptomator itraffic tabby termius \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq telegram bilibili showyedge angry-ip-scanner \
     iterm2 battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast reqable \
-    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing
+    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing intellij-idea
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
