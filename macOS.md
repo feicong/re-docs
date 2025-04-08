@@ -29,23 +29,35 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 
 下面这些工具与库建议都安装一下。
 
-### 通过`brew`安装
+### 编程语言与开发工具
 
 ```bash
-brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstreamer libssh2 poetry aria2 \
-    gtk+3 poppler gtk4 libtiff protobuf libtool psutils autoconf harfbuzz libunibreak pup automake \
-    help2man libusb pycparser bash libusbmuxd pygobject3 bash-completion libusrsctp \
-    bc binutils imagemagick bison python3 python@3.11 libx11 brotli jadx qemu ca-certificates jpeg-turbo qt \
-    quickjs capstone jq json-glib readline jsoncpp jsonrpc-glib libyaml repo reprepro colima \
-    coreutils llvm llvm@18 ruby cryptography libarchive scrcpy curl lua sdl2 lz4 shared-mime-info dbus lzip simg2img \
-    dbus-glib smali docker-completion make dtc dwarf mbedtls dwarfutils libedit sqlite libelf meson libevent \
-    mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses \
-    tesseract-lang freetype texinfo libimobiledevice ninja gawk node npm tree gcc u-boot-tools \
-    gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 nvm unzip libnghttp3 vala libnice vala-language-server git git-lfs \
-    glib openjdk openjdk@17 vim glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg kotlin kotlin-native \
-    libpng openssl openssl@1.1 gnutls libpsl x265 x264 go gobject-introspection xz googletest pcre2 perl \
-    gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx grpcurl graalvm-jdk
+brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
+    llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@17 \
+    kotlin kotlin-native go perl gradle maven pipx graalvm-jdk vim cmake
 ```
+
+
+### 工具与库
+
+```bash
+brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 libtiff protobuf psutils libunibreak pup libusb \
+    pycparser bash libusbmuxd bash-completion libusrsctp bc binutils imagemagick bison libx11 brotli qemu u-boot-tools jpeg-turbo \
+    jq json-glib readline jsoncpp jsonrpc-glib libyaml repo reprepro colima quickjs coreutils cryptography libarchive scrcpy curl grpcurl \
+    sdl2 lz4 shared-mime-info dbus lzip simg2img dbus-glib docker-completion dtc dwarf mbedtls dwarfutils libedit sqlite libelf \
+    libevent mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses tesseract-lang \
+    freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
+    libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
+    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx 
+```
+
+### 逆向分析工具
+
+```bash
+brew install apktool jadx capstone smali
+```
+
+### 软件功能说明
 
 `graphviz`与`plantuml`画图必备。
 
@@ -66,8 +78,6 @@ brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstream
 `tesseract`用于OCR识别。
 
 `ffmpeg`用于视频编解与转码，这一个就够了。
-
-`ollama`用来跑AI。
 
 其中，还有大量的库是这些软件用到的依赖，还有一些是开发`vala`程序用到的，这里不一一介绍了。
 
@@ -122,126 +132,22 @@ brew install bito-cli
 bito
 ```
 
-#### deepseek-r1
-
-启动ollama：
-
-```
-ollama start
-```
-
-<img width="1350" alt="image" src="https://github.com/user-attachments/assets/48a83215-aba6-489f-bbc6-d5deadd40997" />
-
-
-新开一个终端，跑：
-
-```
-ollama pull deepseek-r1:32b
-ollama run deepseek-r1:32b --verbose
-```
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/33d22686-c2e3-4b88-8272-0dd112d996cb" />
-
-<img width="1314" alt="image" src="https://github.com/user-attachments/assets/15eba8e6-0417-4608-99b2-3aed9c361db8" />
-
-
-## alias与bash函数
-
-弄别名与bash函数可以加速处理命令行操作。
-
-```bash
-cc() {
-    git rev-list --count $1
-}
-
-rebase() {
-    git rebase -i HEAD~$1 && git push -f
-}
-
-status() {
-    git status
-}
-
-log() {
-    git log
-}
-
-push() {
-    git add --all && git commit -m "$1" && git push
-}
-
-# squash 4 "update"
-squash() {
-    git reset --soft HEAD~$1 && git add --all && git commit -m "$2." && git push -f
-}
-
-touchm() {
-    find $1 -type f -exec touch -m {} \;
-}
-
-
-# rmall ~/ ".DS_Store"
-rmall() {
-    find $1 -name $2 -exec rm {} \;
-}
-
-rmdsstore() {
-    find . -name ".DS_Store" -exec rm {} \;
-}
-
-# renameext jpg zip
-renameext() {
-    rename "s/$1/$2/" *
-}
-
-cls() {
-    /usr/bin/osascript -e 'tell application "System Events" to tell process "Terminal" to keystroke "k" using command down'
-}
-
-# xattrd ~/Downloads/1.app
-xattrd() {
-    /usr/bin/xattr -r -d com.apple.quarantine $1
-    # or
-    /usr/bin/xattr -c $1
-}
-
-# random 32
-random() {
-    echo $RANDOM | md5sum | head -c $1; echo;
-}
-
-xattrd() {
-    if [[ -z $1 ]]; then
-        echo xattrd path
-        return
-    fi
-    xattr -r -d com.apple.quarantine "$1"
-}
-
-alias clean=cls
-
-alias clear="printf '\33c\e[3J'"
-
-alias ll="ls -al"
-
-alias simlog="tail -f ~/Library/Logs/CoreSimulator/*/system.log"
-```
 
 ## 常用的GUI工具
 
-首先是常用的IDE，根据个人开发需要安装。```brew install android-studio pycharm clion goland```。
+首先是常用的IDE，根据个人开发需要安装。```brew install android-studio intellij-idea pycharm clion goland```。
 
 JB系列有免费社区版本的，专业版本收费可以弄开源项目申请免费使用，可以用一年。也可以其它渠道购买或和谐。有条件建议购买，生产力工具真的好用。
 
 ### 通过brew安装
 
 ```bash
-brew install --cask cmake wireshark charles 1password disk-drill windows-app displays mitmproxy orbstack obs \
-    flutter oracle-jdk usbimager flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code \
+brew install --cask wireshark charles 1password disk-drill windows-app displays mitmproxy orbstack obs \
+    flutter flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code \
     ghidra raspberry-pi-imager github vnc-viewer hiddenbar crescendo iina cryptomator itraffic tabby termius \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq telegram bilibili showyedge angry-ip-scanner \
     iterm2 battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast reqable \
-    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing intellij-idea
+    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
@@ -418,6 +324,89 @@ brew install alienator88/homebrew-cask/sentinel-app
 
 `syncthing`是一款开源的跨平台的文件同步工具。
 
+
+## alias与bash函数
+
+弄别名与bash函数可以加速处理命令行操作。
+
+```bash
+cc() {
+    git rev-list --count $1
+}
+
+rebase() {
+    git rebase -i HEAD~$1 && git push -f
+}
+
+status() {
+    git status
+}
+
+log() {
+    git log
+}
+
+push() {
+    git add --all && git commit -m "$1" && git push
+}
+
+# squash 4 "update"
+squash() {
+    git reset --soft HEAD~$1 && git add --all && git commit -m "$2." && git push -f
+}
+
+touchm() {
+    find $1 -type f -exec touch -m {} \;
+}
+
+
+# rmall ~/ ".DS_Store"
+rmall() {
+    find $1 -name $2 -exec rm {} \;
+}
+
+rmdsstore() {
+    find . -name ".DS_Store" -exec rm {} \;
+}
+
+# renameext jpg zip
+renameext() {
+    rename "s/$1/$2/" *
+}
+
+cls() {
+    /usr/bin/osascript -e 'tell application "System Events" to tell process "Terminal" to keystroke "k" using command down'
+}
+
+# xattrd ~/Downloads/1.app
+xattrd() {
+    /usr/bin/xattr -r -d com.apple.quarantine $1
+    # or
+    /usr/bin/xattr -c $1
+}
+
+# random 32
+random() {
+    echo $RANDOM | md5sum | head -c $1; echo;
+}
+
+xattrd() {
+    if [[ -z $1 ]]; then
+        echo xattrd path
+        return
+    fi
+    xattr -r -d com.apple.quarantine "$1"
+}
+
+alias clean=cls
+
+alias clear="printf '\33c\e[3J'"
+
+alias ll="ls -al"
+
+alias simlog="tail -f ~/Library/Logs/CoreSimulator/*/system.log"
+```
+
 ## 配置
 
 一些常用工具还需要额外的配置一下。
@@ -511,23 +500,14 @@ done
 ```bash
 orb config docker
 {
-"registry-mirrors": [
-    "https://docker.m.daocloud.io", 
-    "https://hub.dftianyi.top",
-    "https://noohub.ru", 
-    "https://huecker.io",
-    "https://dockerhub.timeweb.cloud",
-    "https://0c105db5188026850f80c001def654a0.mirror.swr.myhuaweicloud.com",
-    "https://5tqw56kt.mirror.aliyuncs.com",
-    "https://docker.1panel.live",
-    "http://mirrors.ustc.edu.cn/",
-    "http://mirror.azure.cn/",
-    "https://hub.rat.dev/",
-    "https://docker.ckyl.me/",
-    "https://docker.chenby.cn",
-    "https://docker.hpcloud.cloud",
-    "https://docker.m.daocloud.io"
-  ]
+  "registry-mirrors": [
+      "https://docker.1ms.run",
+      "https://docker.xuanyuan.me",
+      "https://dockerhub.timeweb.cloud",
+      "http://mirrors.ustc.edu.cn/",
+      "http://mirror.azure.cn/",
+      "https://docker.m.daocloud.io"
+    ]
 }
 ```
 
