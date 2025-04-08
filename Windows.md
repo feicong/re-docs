@@ -43,7 +43,15 @@ sc stop wuauserv
 
 ## 安全研究常用工具
 
-首先安装软件管理器chocolatey。
+Windows系统在安装其它软件前，先配置一个Clash方便代理下载与更新软件.
+
+我是建议使用这个：https://github.com/clash-verge-rev/clash-verge-rev/releases
+
+机场配置大家自己想办法，一般是购买或者有服务器的自建。
+
+[Clash.Verge](https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_x64-setup.exe)
+
+接下来，安装软件管理器chocolatey。
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process
