@@ -33,18 +33,18 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 
 ```bash
 brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstreamer libssh2 poetry aria2 \
-    gtk+3 libtasn1 poppler gtk4 libtiff protobuf libtool psutils autoconf harfbuzz libunibreak pup automake \
-    helm libunistring awscli help2man libusb pycparser bash libusbmuxd pygobject3 bash-completion libusrsctp \
-    bc binutils imagemagick bison python@3.11 libx11 brotli jadx qemu ca-certificates jpeg-turbo libxext qt \
-    quickjs capstone jq json-glib readline jsoncpp rename jsonrpc-glib libyaml repo lima reprepro colima \
-    coreutils llvm ruby cryptography libarchive llvm@18 scrcpy curl lua sdl2 lz4 shared-mime-info dbus lzip simg2img \
+    gtk+3 poppler gtk4 libtiff protobuf libtool psutils autoconf harfbuzz libunibreak pup automake \
+    help2man libusb pycparser bash libusbmuxd pygobject3 bash-completion libusrsctp \
+    bc binutils imagemagick bison python3 python@3.11 libx11 brotli jadx qemu ca-certificates jpeg-turbo qt \
+    quickjs capstone jq json-glib readline jsoncpp jsonrpc-glib libyaml repo reprepro colima \
+    coreutils llvm llvm@18 ruby cryptography libarchive scrcpy curl lua sdl2 lz4 shared-mime-info dbus lzip simg2img \
     dbus-glib smali docker-completion make dtc dwarf mbedtls dwarfutils libedit sqlite libelf meson libevent \
     mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses \
-    tesseract-lang freetype texinfo libimobiledevice ninja gawk libimobiledevice-glue node npm tree gcc u-boot-tools \
+    tesseract-lang freetype texinfo libimobiledevice ninja gawk node npm tree gcc u-boot-tools \
     gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 nvm unzip libnghttp3 vala libnice vala-language-server git git-lfs \
-    glib openjdk vim glib-networking openjdk webp libpcap openjpeg wget gnu-sed libplist openssl@1.1 gnupg \
-    libpng openssl@3 x264 gnutls libpsl x265 go gobject-introspection pango xz googletest pcre2 youtube-dl gost perl \
-    yt-dlp gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx ollama grpcurl
+    glib openjdk openjdk@17 vim glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg kotlin kotlin-native \
+    libpng openssl openssl@1.1 gnutls libpsl x265 x264 go gobject-introspection xz googletest pcre2 perl \
+    gperf z3 libslirp gradle maven pipx zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx grpcurl graalvm-jdk
 ```
 
 `graphviz`与`plantuml`画图必备。
@@ -52,8 +52,6 @@ brew install graphviz libsoup pkg-config grep libsoup@2 plantuml apktool gstream
 `apktool`与`smali`反编译APK要用到。
 
 `aria2`与`wget`、`curl`下载软件用到。
-
-`go`与`go-ios`是golang与ios开发必备。
 
 `yt-dlp`与`youtube-dl`是下载youtube视频的命令行工具。
 
