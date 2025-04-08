@@ -130,7 +130,7 @@ $env:USERPROFILE + "\.m2" | ForEach-Object { if (-not (Test-Path $_)) { New-Item
         <mirror>
             <id>aliyunmaven</id>
             <mirrorOf>*</mirrorOf>
-            <name>阿里云公共仓库</name>
+            <name>aliyun</name>
             <url>https://maven.aliyun.com/repository/public</url>
         </mirror>
 
