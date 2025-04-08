@@ -109,7 +109,7 @@ wsl --set-default Ubuntu-22.04
 安装常见的安全研究库：
 
 ```powershell
-pip install pwntools frida requests scapy capstone unicorn
+pip install pwntools frida frida-tools requests scapy capstone unicorn
 ```
 
 ### 安装 Visual Studio
