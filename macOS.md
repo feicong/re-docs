@@ -81,11 +81,11 @@ brew install apktool jadx capstone smali
 
 其中，还有大量的库是这些软件用到的依赖，还有一些是开发`vala`程序用到的，这里不一一介绍了。
 
-### 配置
+## 配置
 
 一些软件需要配置登陆与设置代理。
 
-#### gh
+### gh
 
 这个是github官方的命令行工具，管理仓库贼方便。登陆后就可以使用了。
 
@@ -93,7 +93,7 @@ brew install apktool jadx capstone smali
 gh auth login
 ```
 
-#### pip
+### pip
 
 设置pip的mirror。
 
@@ -103,7 +103,7 @@ python -m pip install --upgrade pip
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
-#### npm
+### npm
 
 设置npm的mirror。
 
@@ -114,10 +114,10 @@ npm config set registry https://registry.npmmirror.com
 安装一些npm工具。
 
 ```bash
-npm install -g go-ios frida
+npm install -g frida
 ```
 
-#### maven
+### maven
 
 ```bash
 mkdir -p ~/.m2
@@ -157,7 +157,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 maven项目中，执行`mvn install`命令即可看到效果。
 
-#### gradle
+### gradle
 
 依赖mirror：
 
