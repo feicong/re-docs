@@ -93,6 +93,12 @@ brew install apktool jadx capstone smali
 gh auth login
 ```
 
+### golang
+
+```bash
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
 ### pip
 
 设置pip的mirror。
