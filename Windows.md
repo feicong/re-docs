@@ -116,6 +116,48 @@ wsl --set-default Ubuntu-22.04
 pip install pwntools frida frida-tools requests scapy capstone unicorn
 ```
 
+### maven
+
+```powershell
+# 创建 .m2 目录（如果不存在）
+$env:USERPROFILE + "\.m2" | ForEach-Object { if (-not (Test-Path $_)) { New-Item -ItemType Directory -Path $_ } }
+
+# 写入 settings.xml 文件
+@'
+<?xml version="1.0" encoding="UTF-8"?> 
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings.xsd">
+    <mirrors>
+        <mirror>
+            <id>aliyunmaven</id>
+            <mirrorOf>*</mirrorOf>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </mirror>
+
+        <mirror>
+            <id>huaweicloud</id>
+            <mirrorOf>*</mirrorOf>
+            <url>https://repo.huaweicloud.com/repository/maven/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-163</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus 163</name>
+            <url>http://mirrors.163.com/maven/repository/maven-public/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-tencentyun</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus tencentyun</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+</settings>
+'@ | Set-Content -Path (Join-Path $env:USERPROFILE ".m2\settings.xml")
+```
+
 ### gradle
 
 ```powershell
