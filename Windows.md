@@ -100,7 +100,7 @@ wsl --set-default Ubuntu-22.04
 
 - **Wireshark**（网络抓包工具）
 - **Fiddler**（HTTP 调试代理）
-- **Burp Suite**（Web 渗透测试工具）
+- **[reqable](https://github.com/reqable/reqable-app/releases/download/2.33.8/reqable-app-windows-x86_64.zip)**（网络抓包测试工具）
 
 ## 开发环境配置
 
