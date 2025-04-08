@@ -29,12 +29,13 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 
 下面这些工具与库建议都安装一下。
 
+
 ### 编程语言与开发工具
 
 ```bash
 brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
     llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@17 \
-    kotlin kotlin-native go perl gradle maven pipx graalvm-jdk vim cmake
+    kotlin kotlin-native go perl gradle maven pipx vim cmake oracle-jdk oracle-jdk@17
 ```
 
 
