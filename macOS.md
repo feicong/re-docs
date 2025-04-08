@@ -117,20 +117,45 @@ npm config set registry https://registry.npmmirror.com
 npm install -g go-ios frida
 ```
 
-#### bito
-
-虽然有vscode插件版本。但使用命令行版本显示更炫酷。
+#### maven
 
 ```bash
-brew tap gitbito/bitocli
-brew install bito-cli
+mkdir -p ~/.m2
+
+echo '<?xml version="1.0" encoding="UTF-8"?> 
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings.xsd">
+    <mirrors>
+        <mirror>
+            <id>aliyunmaven</id>
+            <mirrorOf>*</mirrorOf>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </mirror>
+
+        <mirror>
+            <id>huaweicloud</id>
+            <mirrorOf>*</mirrorOf>
+            <url>https://repo.huaweicloud.com/repository/maven/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-163</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus 163</name>
+            <url>http://mirrors.163.com/maven/repository/maven-public/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-tencentyun</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus tencentyun</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+</settings>' > ~/.m2/settings.xml
 ```
 
-执行命令登陆一下，当然需要先注册一个号，每天免费20次提问。
-
-```bash
-bito
-```
+maven项目中，执行`mvn install`命令即可看到效果。
 
 
 ## 常用的GUI工具
