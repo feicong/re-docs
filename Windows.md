@@ -160,6 +160,8 @@ $env:USERPROFILE + "\.m2" | ForEach-Object { if (-not (Test-Path $_)) { New-Item
 
 ### gradle
 
+设置依赖mirror：
+
 ```powershell
 @'
 fun RepositoryHandler.enableMirror() {
@@ -193,6 +195,25 @@ gradle.beforeSettings {
 }
 '@ | Set-Content -Path "C:\Users\android\.gradle\init.gradle.kts"
 ```
+
+设置代理：
+
+```powershell
+$gradleDir = Join-Path $env:USERPROFILE ".gradle"
+if (-not (Test-Path $gradleDir)) {
+    New-Item -ItemType Directory -Path $gradleDir
+}
+
+# 写入 gradle.properties 文件
+@'
+# https://docs.gradle.org/current/userguide/networking.html
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=7890
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=7890
+'@ | Set-Content -Path (Join-Path $gradleDir "gradle.properties")
+```
+
 
 ### 安装 Visual Studio
 
