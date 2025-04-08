@@ -77,7 +77,11 @@ choco upgrade all -y
 
 ### 软件配置
 
-安装配置wsl
+输入法使用系统自带的五笔或者拼音输入法。
+
+[ImTip](https://imtip.aardio.com/update/ImTip.7z) 使用这个工具来跟随查看输入法状态
+
+### 安装配置wsl
 
 ```powershell
 wsl --install
@@ -120,4 +124,5 @@ pip install pwntools frida frida-tools requests scapy capstone unicorn
 ### 安装虚拟机环境
 
 - **VMware Workstation** 或 **VirtualBox**。
+- 
 - 创建 **Windows 沙盒环境** 进行动态分析。
