@@ -126,8 +126,14 @@ wsl --set-default Ubuntu-22.04
 
 这个是github官方的命令行工具，管理仓库贼方便。登陆后就可以使用了。
 
-```bash
+```powershell
 gh auth login
+```
+
+### golang
+
+```powershell
+go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 ### pip
