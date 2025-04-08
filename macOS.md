@@ -142,17 +142,17 @@ JB系列有免费社区版本的，专业版本收费可以弄开源项目申请
 ### 通过brew安装
 
 ```bash
-brew install --cask wireshark charles 1password disk-drill windows-app displays mitmproxy orbstack obs \
-    flutter flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code \
-    ghidra raspberry-pi-imager github vnc-viewer hiddenbar crescendo iina cryptomator itraffic tabby termius \
-    microsoft-office google-chrome xmind localsend 010-editor wechat qq telegram bilibili showyedge angry-ip-scanner \
-    iterm2 battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast reqable \
-    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq ImageOptim Snipaste licecap drawio syncthing
+brew install --cask wireshark charles reqable 1password disk-drill windows-app displays orbstack obs \
+    flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code github \
+    ghidra vnc-viewer hiddenbar crescendo iina cryptomator itraffic iterm2 tabby termius \
+    microsoft-office google-chrome xmind localsend 010-editor wechat qq bilibili showyedge angry-ip-scanner \
+    battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast  \
+    ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
 
-`wireshark`与`charles`、`mitmproxy`是抓包必备的。
+`wireshark`，`charles`还有`reqable`是抓包必备的。
 
 `1password`是最好用的密码管理软件。
 
