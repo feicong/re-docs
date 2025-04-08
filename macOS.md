@@ -159,6 +159,8 @@ maven项目中，执行`mvn install`命令即可看到效果。
 
 #### gradle
 
+依赖mirror：
+
 ```bash
 code ~/.gradle/init.gradle.kts
 
@@ -191,6 +193,18 @@ gradle.beforeSettings {
     pluginManagement.repositories.enableMirror()
     dependencyResolutionManagement.repositories.enableMirror()
 }
+```
+
+设置代理：
+
+```bash
+code ~/.gradle/gradle.properties
+
+# https://docs.gradle.org/current/userguide/networking.html
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=7890
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=7890
 ```
 
 ## 常用的GUI工具
