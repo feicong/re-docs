@@ -157,6 +157,41 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 maven项目中，执行`mvn install`命令即可看到效果。
 
+#### gradle
+
+```bash
+code ~/.gradle/init.gradle.kts
+
+fun RepositoryHandler.enableMirror() {
+    all {
+        if (this is MavenArtifactRepository) {
+            val originalUrl = this.url.toString().removeSuffix("/")
+            urlMappings[originalUrl]?.let {
+                logger.lifecycle("Repository[$url] is mirrored to $it")
+                this.setUrl(it)
+            }
+        }
+    }
+}
+
+val urlMappings = mapOf(
+    "https://repo.maven.apache.org/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
+    "https://dl.google.com/dl/android/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
+    "https://plugins.gradle.org/m2" to "https://mirrors.tencent.com/nexus/repository/gradle-plugins/"
+)
+
+gradle.allprojects {
+    buildscript {
+        repositories.enableMirror()
+    }
+    repositories.enableMirror()
+}
+
+gradle.beforeSettings { 
+    pluginManagement.repositories.enableMirror()
+    dependencyResolutionManagement.repositories.enableMirror()
+}
+```
 
 ## 常用的GUI工具
 
