@@ -56,13 +56,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 安装软件：
 
 ```powershell
-choco install motrix listen1 git git-lfs wget curl aria2 putty winscp \
+choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler ghidra \
     python3 python311 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome \
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader \
     androidstudio openjdk openjdk17 notepadplusplus vlc nodejs nvm qemu angryip cmake dd fd xxd \
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract \
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop gnupg z3 \
-    plantuml scrcpy f.lux ghidra sudo base64 zstandad apktool jadx patch gzip dos2unix \
+    plantuml scrcpy f.lux sudo base64 zstandad apktool jadx patch gzip dos2unix \
     upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie \
     intellijidea-community pycharm ruby lua make kotlinc graalvm protoc pup imagemagick -y
 ```
