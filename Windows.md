@@ -93,7 +93,9 @@ wsl --set-default Ubuntu-22.04
 ### 逆向分析工具
 
 - **IDA Pro**（反汇编器）
+  
 - **Ghidra**（开源反编译工具）
+  
 - **Apktool**（安卓反编译工具）
 
 ### 动态调试工具
@@ -103,17 +105,50 @@ wsl --set-default Ubuntu-22.04
 ### 网络安全工具
 
 - **Wireshark**（网络抓包工具）
+  
 - **Fiddler**（HTTP 调试代理）
+  
 - **[reqable](https://github.com/reqable/reqable-app/releases/download/2.33.8/reqable-app-windows-x86_64.zip)**（网络抓包测试工具）
 
 ## 开发环境配置
 
-### 编程语言环境
+一些软件需要配置登陆与设置代理。
+
+### gh
+
+这个是github官方的命令行工具，管理仓库贼方便。登陆后就可以使用了。
+
+```bash
+gh auth login
+```
+
+### pip
+
+设置pip的mirror。
+
+```powershell
+python.exe -m pip install --upgrade pip
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+```
 
 安装常见的安全研究库：
 
 ```powershell
 pip install pwntools frida frida-tools requests scapy capstone unicorn
+```
+
+### npm
+
+设置npm的mirror。
+
+```powershell
+npm.cmd config set registry https://registry.npmmirror.com
+```
+
+安装一些npm工具。
+
+```powershell
+npm.cmd install -g frida
 ```
 
 ### maven
