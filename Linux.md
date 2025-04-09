@@ -30,9 +30,12 @@ sudo add-apt-repository ppa:wireshark-dev/stable -y
 ### 安装必备工具
 
 ```bash
-sudo apt update && sudo apt install -y snapd git curl wget unzip zip build-essential cmake \
-    python3 python3-pip libpython3-dev openjdk-17-jdk upx wireshark flex bison make git tree curl wget net-tools \
-    ninja-build meson
+sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip build-essential cmake \
+    python3 python3-pip libpython3-dev openjdk-17-jdk upx wireshark flex bison make tree net-tools \
+    ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby valac kotlin vim \
+    graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli qemu-user qemu-system \
+    jq repo reprepro quickjs coreutils libarchive-dev scrcpy httpie lz4 shared-mime-info dbus lzip \
+    android-sdk-libsparse-utils libelf-dev libevent-dev ffmpeg libffi-dev file
 ```
 
 一些gui工具
@@ -42,9 +45,12 @@ sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
 sudo snap install chromium --classic
 sudo snap install gh --classic
+sudo snap install go --classic
+sudo snap install node --classic
 sudo snap install code --classic
 sudo snap install --edge bytecode-viewer
 sudo snap install ghidra
+sudo snap install protobuf --classic
 ```
 
 ```bash
