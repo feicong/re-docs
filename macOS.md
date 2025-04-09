@@ -49,13 +49,26 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 li
     libevent mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses tesseract-lang \
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
-    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx 
+    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx x11-utils XQuartz
 ```
 
 ### 逆向分析工具
 
 ```bash
 brew install apktool jadx capstone smali
+```
+
+配置x11：
+
+打开XQuartz，在设置的安全性中打开允许连接。关闭后，重新打开它。
+
+```bash
+echo "export DISPLAY=:0" >> ~/.zshrc
+source ~/.zshrc
+
+export DISPLAY=:0
+xhost +
+# 运行xclock看效果
 ```
 
 ### 软件功能说明
