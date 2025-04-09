@@ -154,6 +154,11 @@ unzip ghidra_11.3.1_PUBLIC_20250219.zip -d $HOME/tools
 gh auth login
 ```
 
+### vscode配置
+
+参考[macOS的vscode配置](https://github.com/feicong/re-docs/blob/master/macOS.md#vscode%E9%85%8D%E7%BD%AE)
+
+
 ### golang
 
 ```bash
