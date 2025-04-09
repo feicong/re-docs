@@ -35,7 +35,11 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip bui
     ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby valac kotlin vim \
     graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli qemu-user qemu-system \
     jq repo reprepro quickjs coreutils libarchive-dev scrcpy httpie lz4 shared-mime-info dbus lzip \
-    android-sdk-libsparse-utils libelf-dev libevent-dev ffmpeg libffi-dev file
+    android-sdk-libsparse-utils libelf-dev libevent-dev ffmpeg libffi-dev file flac mpg123 tcpdump flex \
+    fontconfig libncurses-dev libfreetype-dev texinfo libusbmuxd-dev gawk ca-certificates libmagic-dev \
+    gettext unifdef libnghttp2-dev libnghttp3-dev libnice-dev webp libpcap-dev sed libplist-dev gnupg \
+    libpng-dev openssl x264 x265 gobject-introspection googletest gperf z3 libslirp-dev zstd p7zip binwalk \
+    libcapstone-dev apktool jadx smali gradle maven
 ```
 
 一些gui工具
@@ -50,6 +54,7 @@ sudo snap install node --classic
 sudo snap install code --classic
 sudo snap install --edge bytecode-viewer
 sudo snap install ghidra
+sudo snap install tesseract
 sudo snap install protobuf --classic
 ```
 
@@ -123,7 +128,6 @@ sudo snap install android-studio --classic
 ### 反编译和调试工具
 
 ```bash
-sudo apt install -y apktool jadx
 pip3 install frida-tools
 ```
 
