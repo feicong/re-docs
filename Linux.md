@@ -31,7 +31,8 @@ sudo add-apt-repository ppa:wireshark-dev/stable -y
 
 ```bash
 sudo apt update && sudo apt install -y snapd git curl wget unzip zip build-essential cmake \
-    python3 python3-pip openjdk-17-jdk upx
+    python3 python3-pip libpython3-dev openjdk-17-jdk upx wireshark flex bison make git tree curl wget net-tools \
+    ninja-build meson
 ```
 
 一些gui工具
@@ -40,7 +41,26 @@ sudo apt update && sudo apt install -y snapd git curl wget unzip zip build-essen
 sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
 sudo snap install chromium --classic
-sudo snap install wireshark --classic
+sudo snap install gh --classic
+sudo snap install code --classic
+sudo snap install --edge bytecode-viewer
+sudo snap install ghidra
+```
+
+```bash
+wget https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-2.1.0-x64.AppImage
+chmod a+x balenaEtcher-2.1.0-x64.AppImage
+
+wget https://www.sweetscape.com/download/010EditorLinux64Installer.tar.gz
+tar xvf 010EditorLinux64Installer.tar.gz
+chmod +x 010EditorLinux64Installer
+./010EditorLinux64Installer  --prefix 010editor --mode silent
+chmod a+x 010editor/010editor
+
+wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_amd64.deb
+sudo apt install ./Clash.Verge_*.deb
+
+
 ```
 
 
