@@ -79,9 +79,7 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler gh
     intellijidea-community pycharm ruby lua make kotlinc protoc pup imagemagick -y
 ```
 
-```powershell
-Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
-```
+> Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
 
 更新软件：
 
