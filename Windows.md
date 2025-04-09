@@ -115,11 +115,26 @@ setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2" /M
 
 ### 安装配置wsl
 
+安装：
+
 ```powershell
 wsl --install
 wsl --update
 wsl --list --online
 wsl --set-default Ubuntu-22.04
+```
+
+配置代理：
+
+```powershell
+cat C:\Users\android\.wslconfig
+
+[experimental]
+autoMemoryReclaim=gradual
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
 ```
 
 ### 逆向分析工具
