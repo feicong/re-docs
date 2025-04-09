@@ -87,6 +87,26 @@ choco upgrade all -y
 
 使用这个下载软件：https://neatdownload.com/
 
+###环境变量配置
+
+使用setx自动配置部分环境变量。
+
+```powershell
+setx ANDROID_HOME "C:\Users\android\AppData\Local\Android\Sdk" /M
+setx ANDROID_NDK "%ANDROID_HOME%\ndk\28.0.12916984"
+setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2" /M
+```
+
+下面的手动加到Path中去，如果使用setx设置错误，后果非常严重！
+
+```powershell
+%ANDROID_HOME%\build-tools\36.0.0
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\cmdline-tools\latest\bin
+%JAVA_HOME%\bin
+```
+
 ### 软件配置
 
 输入法使用系统自带的五笔或者拼音输入法。
