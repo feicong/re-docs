@@ -121,7 +121,7 @@ npm config set registry https://registry.npmmirror.com
 安装一些npm工具。
 
 ```bash
-npm install -g frida
+npm install -g typescript
 ```
 
 ### maven
