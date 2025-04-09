@@ -525,7 +525,6 @@ extensions=(
   "github.vscode-pull-request-github"
   "golang.go"
   "google.aidl-language"
-  "googlecloudtools.cloudcode"
   "gruntfuggly.todo-tree"
   "jebbs.plantuml"
   "josetr.cmake-language-support-vscode"
@@ -619,23 +618,14 @@ orb create --arch amd64 ubuntu:jammy ubuntu64
 ```bash
 sudo tee /etc/docker/daemon.json <<EOF
 {
-"registry-mirrors": [
-    "https://docker.m.daocloud.io", 
-    "https://hub.dftianyi.top",
-    "https://noohub.ru", 
-    "https://huecker.io",
-    "https://dockerhub.timeweb.cloud",
-    "https://0c105db5188026850f80c001def654a0.mirror.swr.myhuaweicloud.com",
-    "https://5tqw56kt.mirror.aliyuncs.com",
-    "https://docker.1panel.live",
-    "http://mirrors.ustc.edu.cn/",
-    "http://mirror.azure.cn/",
-    "https://hub.rat.dev/",
-    "https://docker.ckyl.me/",
-    "https://docker.chenby.cn",
-    "https://docker.hpcloud.cloud",
-    "https://docker.m.daocloud.io"
-  ]
+  "registry-mirrors": [
+      "https://docker.1ms.run",
+      "https://docker.xuanyuan.me",
+      "https://dockerhub.timeweb.cloud",
+      "http://mirrors.ustc.edu.cn/",
+      "http://mirror.azure.cn/",
+      "https://docker.m.daocloud.io"
+    ]
 }
 EOF
 ```
