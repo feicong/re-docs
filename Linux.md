@@ -2,21 +2,21 @@
 
 ## 选择合适的Linux发行版
 
-推荐使用**Ubuntu 22.04 LTS**，主要这是安卓系统与软件开发使用的官方Linux发行版本。
+推荐使用**Ubuntu 24.04 LTS**，主要这是安卓系统与软件开发使用的官方Linux发行版本。
 
-官方下载地址：[https://releases.ubuntu.com/22.04/](https://releases.ubuntu.com/22.04/)
+官方下载地址：[https://releases.ubuntu.com/24.04/](https://releases.ubuntu.com/24.04/)
 
-下载链接直达：[https://releases.ubuntu.com/22.04/ubuntu-22.04.5-desktop-amd64.iso](https://releases.ubuntu.com/22.04/ubuntu-22.04.5-desktop-amd64.iso)
+下载链接直达：[https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso)
 
 国内mirror下载链接列表：
 
-[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso)
+[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
 
-[https://mirrors.ustc.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso](https://mirrors.ustc.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso)
+[https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
 
-[https://mirrors.aliyun.com/ubuntu-releases/22.04.5/ubuntu-22.04.5-desktop-amd64.iso](https://mirrors.aliyun.com/ubuntu-releases/22.04.5/ubuntu-22.04.5-desktop-amd64.iso)
+[https://mirrors.aliyun.com/ubuntu-releases/24.04.2/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.aliyun.com/ubuntu-releases/24.04.2/ubuntu-24.04.2-desktop-amd64.iso)
 
-[https://mirrors.sdu.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso](https://mirrors.sdu.edu.cn/ubuntu-releases/22.04/ubuntu-22.04.5-desktop-amd64.iso)
+[https://mirrors.sdu.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.sdu.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
 
 ## 基础环境配置
 
