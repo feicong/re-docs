@@ -30,9 +30,19 @@ sudo add-apt-repository ppa:wireshark-dev/stable -y
 ### 安装必备工具
 
 ```bash
-sudo apt update && sudo apt install -y snapd adb fastboot git curl wget unzip zip build-essential cmake \
-    python3 python3-pip openjdk-17-jdk upx wireshark
+sudo apt update && sudo apt install -y snapd git curl wget unzip zip build-essential cmake \
+    python3 python3-pip openjdk-17-jdk upx
 ```
+
+一些gui工具
+
+```bash
+sudo snap install intellij-idea-community --classic
+sudo snap install pycharm-community --classic
+sudo snap install chromium --classic
+sudo snap install wireshark --classic
+```
+
 
 ### 设置Python环境
 
@@ -78,10 +88,7 @@ sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2
 ### 自动配置安装
 
 ```bash
-sudo snap install intellij-idea-community --classic
-sudo snap install pycharm-community --classic
 sudo snap install android-studio --classic
-
 ```
 
 
