@@ -113,7 +113,7 @@ setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2" /M
 
 [ImTip](https://imtip.aardio.com/update/ImTip.7z) 使用这个工具来跟随查看输入法状态
 
-### 安装配置wsl
+### 安装配置WSL
 
 安装：
 
@@ -124,7 +124,7 @@ wsl --list --online
 wsl --set-default Ubuntu-22.04
 ```
 
-配置代理：
+WSL配置代理：
 
 ```powershell
 cat C:\Users\android\.wslconfig
@@ -137,13 +137,10 @@ firewall=true
 autoProxy=true
 ```
 
-### 逆向分析工具
+### Docker配置
 
-- **IDA Pro**（反汇编器）
-  
-- **Ghidra**（开源反编译工具）
-  
-- **Apktool**（安卓反编译工具）
+见[macOS版本的Docker配置](https://github.com/feicong/re-docs/blob/master/macOS.md#orbstack%E9%85%8D%E7%BD%AE)
+
 
 ### 动态调试工具
 
@@ -163,7 +160,81 @@ autoProxy=true
 
 ### vscode配置
 
-参考[macOS的vscode配置](https://github.com/feicong/re-docs/blob/master/macOS.md#vscode%E9%85%8D%E7%BD%AE)
+```powershell
+$extensions = @(
+  "redhat.java",
+  "vscjava.vscode-gradle",
+  "vscjava.vscode-java-pack",
+  "vscjava.vscode-java-debug",
+  "adelphes.android-dev-ext",
+  "OmarDulaimi.breakpoint-bookmarks",
+  "ms-dotnettools.csharp",
+  "bito.bito",
+  "bpfdeploy.bpftrace",
+  "codezombiech.gitignore",
+  "cornell3110sp20.rml-highlighter",
+  "dbaeumer.vscode-eslint",
+  "eriklynd.json-tools",
+  "formulahendry.code-runner",
+  "foxundermoon.shell-format",
+  "genieai.chatgpt-vscode",
+  "github.codespaces",
+  "github.copilot",
+  "github.copilot-chat",
+  "github.github-vscode-theme",
+  "github.remotehub",
+  "github.vscode-github-actions",
+  "github.vscode-pull-request-github",
+  "golang.go",
+  "google.aidl-language",
+  "gruntfuggly.todo-tree",
+  "jebbs.plantuml",
+  "josetr.cmake-language-support-vscode",
+  "jrieken.md-navigate",
+  "mesonbuild.mesonbuild",
+  "ms-azuretools.vscode-docker",
+  "ms-ceintl.vscode-language-pack-zh-hans",
+  "ms-dotnettools.vscode-dotnet-runtime",
+  "ms-python.autopep8",
+  "ms-python.debugpy",
+  "ms-python.isort",
+  "ms-python.python",
+  "ms-python.vscode-pylance",
+  "ms-vscode-remote.remote-containers",
+  "ms-vscode-remote.remote-ssh",
+  "ms-vscode-remote.remote-ssh-edit",
+  "ms-vscode-remote.remote-wsl",
+  "ms-vscode-remote.vscode-remote-extensionpack",
+  "ms-vscode.azure-repos",
+  "ms-vscode.cmake-tools",
+  "ms-vscode.cpptools",
+  "ms-vscode.cpptools-extension-pack",
+  "ms-vscode.cpptools-themes",
+  "ms-vscode.hexeditor",
+  "ms-vscode.makefile-tools",
+  "ms-vscode.powershell",
+  "ms-vscode.remote-explorer",
+  "ms-vscode.remote-repositories",
+  "ms-vscode.remote-server",
+  "ms-vscode.vscode-typescript-next",
+  "osstekz.vala-code",
+  "prince781.vala",
+  "redhat.vscode-commons",
+  "redhat.vscode-xml",
+  "redhat.vscode-yaml",
+  "rogalmic.bash-debug",
+  "twxs.cmake",
+  "vadimcn.vscode-lldb",
+  "vscjava.vscode-maven",
+  "vscode-icons-team.vscode-icons",
+  "xaver.clang-format"
+)
+
+foreach ($extension in $extensions) {
+  Write-Host "正在安装扩展: $extension"
+  code --install-extension $extension
+}
+```
 
 ### gh
 
