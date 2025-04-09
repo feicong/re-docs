@@ -176,6 +176,8 @@ pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/si
 
 ```bash
 npm config set registry https://registry.npmmirror.com
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
 ```
 
 安装一些npm工具。
