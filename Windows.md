@@ -20,9 +20,7 @@ Windows 11系统安装后激活（管理员权限运行PowerShell)：
 irm massgrave.dev/get.ps1 | iex
 ```
 
-### 关闭不必要的系统功能
-
-关闭 Windows Defender
+### 关闭Windows Defender
 
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $true
@@ -39,6 +37,12 @@ reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v Enable
 ```powershell
 sc config wuauserv start= disabled
 sc stop wuauserv
+```
+
+### 启动系统保护
+
+```bash
+Enable-ComputerRestore -Drive "C:\"
 ```
 
 ## 安全研究常用工具
