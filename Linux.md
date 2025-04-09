@@ -24,12 +24,14 @@
 
 ```bash
 sudo apt update && sudo apt upgrade -y
+sudo add-apt-repository ppa:wireshark-dev/stable -y
 ```
 
 ### 安装必备工具
 
 ```bash
-sudo apt install -y git curl wget unzip zip build-essential cmake python3 python3-pip openjdk-17-jdk upx
+sudo apt update && sudo apt install -y snapd adb fastboot git curl wget unzip zip build-essential cmake \
+    python3 python3-pip openjdk-17-jdk upx wireshark
 ```
 
 ### 设置Python环境
@@ -38,9 +40,11 @@ sudo apt install -y git curl wget unzip zip build-essential cmake python3 python
 pip3 install --upgrade pip
 ```
 
-## Android 开发环境配置
+## 开发环境配置
 
-### 安装Android Studio
+支持snapd安装方式与手动安装方式。
+
+### 手动配置安装
 
 下载地址：[https://developer.android.com/?hl=zh-cn](https://developer.android.com/?hl=zh-cn)
 
@@ -50,9 +54,7 @@ sudo tar -xvzf android-studio-*.tar.gz -C /opt/
 /opt/android-studio/bin/studio.sh
 ```
 
-### 安装 Android SDK和NDK
-
-可以在Android Studio手动安装或者命令行安装。
+接下来安装，Android SDK和NDK。可以在Android Studio手动安装或者命令行安装。
 
 ```bash
 mkdir -p $HOME/Android/sdk
@@ -68,25 +70,20 @@ mv $HOME/Android/sdk/cmdline-tools-latest $HOME/Android/sdk/cmdline-tools/latest
 ```bash
 export ANDROID_HOME=$HOME/Android/sdk
 export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
-```
 
-应用环境变量：
-
-```bash
 source ~/.bashrc
-```
-
-安装SDK组件：
-
-```bash
 sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2"
 ```
 
-### 3.2 安装adb和fastboot
+### 自动配置安装
 
 ```bash
-sudo apt install -y adb fastboot
+sudo snap install intellij-idea-community --classic
+sudo snap install pycharm-community --classic
+sudo snap install android-studio --classic
+
 ```
+
 
 ## 逆向分析工具
 
