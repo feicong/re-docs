@@ -45,7 +45,7 @@ pip3 install --upgrade pip
 下载地址：[https://developer.android.com/?hl=zh-cn](https://developer.android.com/?hl=zh-cn)
 
 ```bash
-wget https://xxx/android-studio-xxx-linux.tar.gz
+wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.3.1.14/android-studio-2024.3.1.14-linux.tar.gz
 sudo tar -xvzf android-studio-*.tar.gz -C /opt/
 /opt/android-studio/bin/studio.sh
 ```
@@ -63,7 +63,7 @@ mkdir -p $HOME/Android/sdk/cmdline-tools
 mv $HOME/Android/sdk/cmdline-tools-latest $HOME/Android/sdk/cmdline-tools/latest
 ```
 
-添加环境变量到 `~/.bashrc` 或 `~/.zshrc`：
+添加环境变量到 `~/.bashrc`：
 
 ```bash
 export ANDROID_HOME=$HOME/Android/sdk
@@ -107,6 +107,139 @@ pip3 install frida-tools
 wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3.1_build/ghidra_11.3.1_PUBLIC_20250219.zip
 unzip ghidra_11.3.1_PUBLIC_20250219.zip -d $HOME/tools
 ```
+
+## 配置
+
+一些软件需要配置登陆与设置代理。
+
+### gh
+
+这个是github官方的命令行工具，管理仓库贼方便。登陆后就可以使用了。
+
+```bash
+gh auth login
+```
+
+### golang
+
+```bash
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+### pip
+
+设置pip的mirror。
+
+```bash
+export HOMEBREW_PIP_INDEX_URL="https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+python -m pip install --upgrade pip
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+```
+
+### npm
+
+设置npm的mirror。
+
+```bash
+npm config set registry https://registry.npmmirror.com
+```
+
+安装一些npm工具。
+
+```bash
+npm install -g typescript
+```
+
+### maven
+
+```bash
+mkdir -p ~/.m2
+
+echo '<?xml version="1.0" encoding="UTF-8"?> 
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings.xsd">
+    <mirrors>
+        <mirror>
+            <id>aliyunmaven</id>
+            <mirrorOf>*</mirrorOf>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </mirror>
+
+        <mirror>
+            <id>huaweicloud</id>
+            <mirrorOf>*</mirrorOf>
+            <url>https://repo.huaweicloud.com/repository/maven/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-163</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus 163</name>
+            <url>http://mirrors.163.com/maven/repository/maven-public/</url>
+        </mirror>
+
+        <mirror>
+            <id>nexus-tencentyun</id>
+            <mirrorOf>*</mirrorOf>
+            <name>Nexus tencentyun</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+</settings>' > ~/.m2/settings.xml
+```
+
+maven项目中，执行`mvn install`命令即可看到效果。
+
+### gradle
+
+依赖mirror：
+
+```bash
+code ~/.gradle/init.gradle.kts
+
+fun RepositoryHandler.enableMirror() {
+    all {
+        if (this is MavenArtifactRepository) {
+            val originalUrl = this.url.toString().removeSuffix("/")
+            urlMappings[originalUrl]?.let {
+                logger.lifecycle("Repository[$url] is mirrored to $it")
+                this.setUrl(it)
+            }
+        }
+    }
+}
+
+val urlMappings = mapOf(
+    "https://repo.maven.apache.org/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
+    "https://dl.google.com/dl/android/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
+    "https://plugins.gradle.org/m2" to "https://mirrors.tencent.com/nexus/repository/gradle-plugins/"
+)
+
+gradle.allprojects {
+    buildscript {
+        repositories.enableMirror()
+    }
+    repositories.enableMirror()
+}
+
+gradle.beforeSettings { 
+    pluginManagement.repositories.enableMirror()
+    dependencyResolutionManagement.repositories.enableMirror()
+}
+```
+
+设置代理：
+
+```bash
+code ~/.gradle/gradle.properties
+
+# https://docs.gradle.org/current/userguide/networking.html
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=7890
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=7890
+```
+
 
 ## 其他优化
 
