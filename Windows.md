@@ -161,6 +161,10 @@ autoProxy=true
 
 一些软件需要配置登陆与设置代理。
 
+### vscode配置
+
+参考[macOS的vscode配置](https://github.com/feicong/re-docs/blob/master/macOS.md#vscode%E9%85%8D%E7%BD%AE)
+
 ### gh
 
 这个是github官方的命令行工具，管理仓库贼方便。登陆后就可以使用了。
