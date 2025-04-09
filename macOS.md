@@ -1,5 +1,7 @@
 # 安全研究员的macOS配置完全指南
 
+文档最新更新请访问：[https://github.com/feicong/re-docs/edit/master/macOS.md](https://github.com/feicong/re-docs/edit/master/macOS.md)
+
 Apple M4 Pro为演示配置的环境，收到机器后，开机然后开始设置。
 
 ## 环境准备
@@ -49,16 +51,10 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 li
     libevent mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses tesseract-lang \
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
-    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx x11-utils XQuartz
+    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz apktool jadx capstone
 ```
 
-### 逆向分析工具
-
-```bash
-brew install apktool jadx capstone smali
-```
-
-配置x11：
+### 配置x11
 
 打开XQuartz，在设置的安全性中打开允许连接。关闭后，重新打开它。
 
@@ -69,6 +65,36 @@ source ~/.zshrc
 export DISPLAY=:0
 xhost +
 # 运行xclock看效果
+```
+
+### 配置环境变量
+
+修改：~/.bash_profile
+或者修改：~/.zprofile
+
+```bash
+export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+
+export PATH="/opt/homebrew/opt/llvm/bin:~/Library/Python/3.9/bin:~/go/bin:$PATH"
+
+export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+
+export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/25.2.9519653
+export ANDROID_NDK=$ANDROID_HOME/ndk/25.2.9519653
+
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home
+export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$PATH:/Applications/010 Editor.app/Contents/CmdLine:/opt/homebrew/bin"
 ```
 
 ### 软件功能说明
@@ -119,7 +145,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 ```bash
 export HOMEBREW_PIP_INDEX_URL="https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
@@ -128,9 +154,9 @@ pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/si
 设置npm的mirror。
 
 ```bash
-npm config set registry https://registry.npmmirror.com
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
+npm config set registry https://registry.npmmirror.com
 ```
 
 安装一些npm工具。

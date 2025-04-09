@@ -1,5 +1,7 @@
 # Windows安全研究员配置完全指南
 
+文档最新更新请访问：[https://github.com/feicong/re-docs/edit/master/Windows.md](https://github.com/feicong/re-docs/edit/master/Windows.md)
+
 Windows 11 Pro版本的Ser 7迷你主机为演示配置的环境。
 
 ## 操作系统配置
@@ -76,7 +78,7 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler gh
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop gnupg z3 \
     plantuml scrcpy f.lux sudo base64 zstandad apktool jadx patch gzip dos2unix \
     upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie \
-    intellijidea-community pycharm ruby lua make kotlinc protoc pup imagemagick -y
+    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup imagemagick -y
 ```
 
 > Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
