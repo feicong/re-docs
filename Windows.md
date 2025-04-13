@@ -78,7 +78,7 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler gh
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop gnupg z3 \
     plantuml scrcpy f.lux sudo base64 zstandad apktool jadx patch gzip dos2unix \
     upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie \
-    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup imagemagick -y
+    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup imagemagick prince -y
 ```
 
 > Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
@@ -209,7 +209,6 @@ $extensions = @(
   "ms-vscode-remote.remote-ssh-edit",
   "ms-vscode-remote.remote-wsl",
   "ms-vscode-remote.vscode-remote-extensionpack",
-  "ms-vscode.azure-repos",
   "ms-vscode.cmake-tools",
   "ms-vscode.cpptools",
   "ms-vscode.cpptools-extension-pack",
@@ -232,6 +231,9 @@ $extensions = @(
   "vscjava.vscode-maven",
   "vscode-icons-team.vscode-icons",
   "xaver.clang-format"
+  "shd101wyy.markdown-preview-enhanced"
+  "saoudrizwan.claude-dev"
+  "Continue.continue"
 )
 
 foreach ($extension in $extensions) {

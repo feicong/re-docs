@@ -51,7 +51,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 li
     libevent mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses tesseract-lang \
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
-    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz apktool jadx capstone
+    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz prince apktool jadx capstone
 ```
 
 ### 配置x11
@@ -582,7 +582,6 @@ extensions=(
   "ms-vscode-remote.remote-ssh-edit"
   "ms-vscode-remote.remote-wsl"
   "ms-vscode-remote.vscode-remote-extensionpack"
-  "ms-vscode.azure-repos"
   "ms-vscode.cmake-tools"
   "ms-vscode.cpptools"
   "ms-vscode.cpptools-extension-pack"
@@ -605,6 +604,9 @@ extensions=(
   "vscjava.vscode-maven"
   "vscode-icons-team.vscode-icons"
   "xaver.clang-format"
+  "shd101wyy.markdown-preview-enhanced"
+  "saoudrizwan.claude-dev"
+  "Continue.continue"
 )
 
 for extension in "${extensions[@]}"; do
