@@ -190,14 +190,14 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
             <id>nexus-163</id>
             <mirrorOf>*</mirrorOf>
             <name>Nexus 163</name>
-            <url>http://mirrors.163.com/maven/repository/maven-public/</url>
+            <url>https://mirrors.163.com/maven/repository/maven-public/</url>
         </mirror>
 
         <mirror>
             <id>nexus-tencentyun</id>
             <mirrorOf>*</mirrorOf>
             <name>Nexus tencentyun</name>
-            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
         </mirror>
     </mirrors>
 </settings>' > ~/.m2/settings.xml
