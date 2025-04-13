@@ -96,9 +96,9 @@ choco upgrade all -y
 使用setx自动配置部分环境变量。
 
 ```powershell
-setx ANDROID_HOME "C:\Users\android\AppData\Local\Android\Sdk" /M
+setx ANDROID_HOME "C:\Users\android\AppData\Local\Android\Sdk"
 setx ANDROID_NDK "%ANDROID_HOME%\ndk\28.0.12916984"
-setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2" /M
+setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2"
 ```
 
 下面的手动加到Path中去，如果使用setx设置错误，后果非常严重！
