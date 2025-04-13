@@ -1,4 +1,4 @@
-# Linux安全研究员配置完全指南
+# 安全研究员的Linux配置完全指南
 
 文档最新更新请访问：[https://github.com/feicong/re-docs/edit/master/Linux.md](https://github.com/feicong/re-docs/edit/master/Linux.md)
 
