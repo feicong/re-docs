@@ -265,9 +265,9 @@ JB系列有免费社区版本的，专业版本收费可以弄开源项目申请
 ### 通过brew安装
 
 ```bash
-brew install --cask wireshark charles reqable 1password disk-drill windows-app displays orbstack obs \
+brew install --cask wireshark charles reqable postman 1password disk-drill windows-app displays \
     flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code github chatgpt \
-    ghidra vnc-viewer hiddenbar crescendo iina cryptomator itraffic iterm2 tabby termius \
+    ghidra vnc-viewer hiddenbar crescendo iina cryptomator itraffic iterm2 tabby termius orbstack obs \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq bilibili showyedge angry-ip-scanner \
     battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend vmware-fusion raycast claude cursor \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing
