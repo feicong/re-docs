@@ -73,12 +73,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler ghidra \
     python3 python311 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome \
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader \
-    androidstudio openjdk openjdk17 oracle17jdk notepadplusplus vlc nodejs nvm qemu angryip cmake dd fd xxd \
+    androidstudio openjdk openjdk17 oracle17jdk notepadplusplus vlc nodejs nvm qemu angryip cmake \
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract \
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop gnupg z3 \
-    plantuml scrcpy f.lux sudo base64 zstandad apktool jadx patch gzip dos2unix \
-    upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie \
-    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup imagemagick prince -y
+    plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd \
+    upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie imagemagick \
+    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup cursoride claude -y
 ```
 
 > Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
