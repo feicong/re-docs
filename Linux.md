@@ -172,6 +172,7 @@ sudo snap install go --classic
 sudo snap install node --classic
 sudo snap install code --classic
 sudo snap install protobuf --classic
+sudo snap install postman --classic
 ```
 
 手动安装下面的工具：
