@@ -269,7 +269,7 @@ brew install --cask wireshark charles reqable postman 1password disk-drill windo
     flux utm balenaetcher phantomjs vienna beyond-compare visual-studio-code github chatgpt raycast \
     ghidra vnc-viewer hiddenbar crescendo iina cryptomator itraffic iterm2 tabby termius orbstack obs \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq bilibili showyedge angry-ip-scanner \
-    battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend cherry-studio claude cursor \
+    battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend cherry-studio claude cursor lulu \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing
 
 brew install alienator88/homebrew-cask/sentinel-app
