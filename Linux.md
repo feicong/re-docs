@@ -158,7 +158,7 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip bui
     libjsonrpc-glib-1.0-dev libsoup-3.0-dev libsqlite3-dev libunwind-dev gcc gdb libglib2.0-dev libgraphviz-dev \
     libgee-0.8-dev libsoup2.4-dev libgstreamerd-3-dev gtk-3-examples libgtk-3-bin libgtk-3-common libgtk-3-dev \
     gtk-4-examples libgtk-4-bin libgtk-4-common libgtk-4-dev libvala-*dev tzdata iputils-ping socat ltrace strace \
-    libtool-bin p7zip-full libc6-dev fuse docker.io docker-buildx docker-compose gnome-tweaks
+    libtool-bin p7zip-full libc6-dev fuse docker.io docker-buildx docker-compose gnome-tweaks net-tools openssh-server
 ```
 
 一些工具使用snap下载最新版本.
