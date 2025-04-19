@@ -166,7 +166,7 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip bui
 ```bash
 sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
-sudo snap install clion --classic
+sudo snap install clion-community --classic
 sudo snap install gh --classic
 sudo snap install go --classic
 sudo snap install node --classic
