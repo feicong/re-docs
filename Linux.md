@@ -144,7 +144,7 @@ sudo add-apt-repository ppa:wireshark-dev/stable -y
 ### 安装必备工具
 
 ```bash
-sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip build-essential cmake \
+sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zip build-essential cmake \
     python3 python3-pip libpython3-dev openjdk-21-jdk openjdk-17-jdk upx wireshark flex bison make tree net-tools \
     ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby valac kotlin vim \
     graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli qemu-user qemu-system \
@@ -152,13 +152,14 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget unzip zip bui
     android-sdk-libsparse-utils libelf-dev libevent-dev ffmpeg libffi-dev file flac mpg123 tcpdump flex \
     fontconfig libncurses-dev libfreetype-dev texinfo libusbmuxd-dev gawk ca-certificates libmagic-dev \
     gettext unifdef libnghttp2-dev libnghttp3-dev libnice-dev webp libpcap-dev sed libplist-dev gnupg \
-    libpng-dev openssl x264 x265 gobject-introspection googletest gperf z3 libslirp-dev zstd p7zip binwalk \
+    libpng-dev openssl x264 x265 mpv gobject-introspection googletest gperf z3 libslirp-dev zstd p7zip binwalk \
     libcapstone-dev apktool smali gradle maven libzstd-dev libcurl4-openssl-dev libedit-dev lsb-release \
     software-properties-common apt-file libdwarf-dev libgirepository1.0-dev x11-apps patchelf libjson-glib-dev \
     libjsonrpc-glib-1.0-dev libsoup-3.0-dev libsqlite3-dev libunwind-dev gcc gdb libglib2.0-dev libgraphviz-dev \
     libgee-0.8-dev libsoup2.4-dev libgstreamerd-3-dev gtk-3-examples libgtk-3-bin libgtk-3-common libgtk-3-dev \
     gtk-4-examples libgtk-4-bin libgtk-4-common libgtk-4-dev libvala-*dev tzdata iputils-ping socat ltrace strace \
-    libtool-bin p7zip-full libc6-dev fuse docker.io docker-buildx docker-compose gnome-tweaks net-tools openssh-server
+    libtool-bin p7zip-full libc6-dev fuse docker.io docker-buildx docker-compose gnome-tweaks net-tools openssh-server \
+    neofetch libfuse2 libfuse3-dev dnsutils
 ```
 
 一些工具使用snap下载最新版本.
