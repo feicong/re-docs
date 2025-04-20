@@ -75,8 +75,8 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler po
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader `
     androidstudio openjdk openjdk17 oracle17jdk notepadplusplus vlc nodejs nvm qemu angryip cmake `
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract `
-    ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop gnupg z3 `
-    plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd `
+    ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop microsoft-windows-terminal `
+    plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
     upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie imagemagick `
     intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup cursoride claude -y
 ```
