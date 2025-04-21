@@ -52,7 +52,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
     gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf
+    apktool jadx capstone neofetch mpv windsurf websocat
 ```
 
 ### 配置x11
