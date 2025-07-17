@@ -163,7 +163,7 @@ npm config set registry https://registry.npmmirror.com
 安装一些npm工具。
 
 ```bash
-npm install -g typescript
+npm install -g @anthropic-ai/claude-code typescript
 ```
 
 ### maven
@@ -271,7 +271,7 @@ brew install --cask wireshark charles reqable postman httpie 1password disk-dril
     microsoft-office google-chrome xmind localsend 010-editor wechat qq bilibili showyedge angry-ip-scanner \
     battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend cherry-studio claude cursor lulu \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing \
-    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika
+    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika gemini-cli
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
