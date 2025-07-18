@@ -163,7 +163,7 @@ npm config set registry https://registry.npmmirror.com
 安装一些npm工具。
 
 ```bash
-npm install -g @anthropic-ai/claude-code typescript
+npm install -g @anthropic-ai/claude-code @google/gemini-cli typescript
 ```
 
 ### maven
