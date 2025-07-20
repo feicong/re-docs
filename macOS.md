@@ -52,7 +52,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
     gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf websocat
+    apktool jadx capstone neofetch mpv windsurf websocat 
 ```
 
 ### 配置x11
@@ -271,7 +271,7 @@ brew install --cask wireshark charles reqable postman httpie 1password disk-dril
     microsoft-office google-chrome xmind localsend 010-editor wechat qq bilibili showyedge angry-ip-scanner \
     battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend cherry-studio claude cursor lulu \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing \
-    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika gemini-cli
+    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika gemini-cli Shottr
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
