@@ -87,8 +87,10 @@ export PATH="/opt/homebrew/opt/llvm/bin:~/Library/Python/3.9/bin:~/go/bin:$PATH"
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 
-export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/25.2.9519653
-export ANDROID_NDK=$ANDROID_HOME/ndk/25.2.9519653
+export NDK_ROOT=$ANDROID_HOME/ndk/28.1.13356709
+export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/28.1.13356709
+export ANDROID_NDK=$ANDROID_HOME/ndk/28.1.13356709
+export PATH=$PATH:$ANDROID_NDK_ROOT
 
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
