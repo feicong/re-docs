@@ -8,17 +8,14 @@
 
 官方下载地址：[https://releases.ubuntu.com/24.04/](https://releases.ubuntu.com/24.04/)
 
-下载链接直达：[https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso)
+下载链接直达：[https://releases.ubuntu.com/24.04/ubuntu-24.04.3-desktop-amd64.iso](https://releases.ubuntu.com/24.04/ubuntu-24.04.3-desktop-amd64.iso)
 
 国内mirror下载链接列表：
 
-[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
+[https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.3-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.3-desktop-amd64.iso)
 
-[https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
+[https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.3-desktop-amd64.iso](https://mirrors.ustc.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.3-desktop-amd64.iso)
 
-[https://mirrors.aliyun.com/ubuntu-releases/24.04.2/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.aliyun.com/ubuntu-releases/24.04.2/ubuntu-24.04.2-desktop-amd64.iso)
-
-[https://mirrors.sdu.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso](https://mirrors.sdu.edu.cn/ubuntu-releases/24.04/ubuntu-24.04.2-desktop-amd64.iso)
 
 ## 基础环境配置
 
