@@ -474,3 +474,15 @@ sudo add-apt-repository ppa:cappelikan/ppa -y
 sudo apt update && sudo apt install mainline -y
 sudo mainline install 6.6
 ```
+
+### 安装cuttlefish
+
+```bash
+tar xf debs.tar
+sudo dpkg -i ./cuttlefish-common_*_*64.deb || sudo apt-get install -f
+sudo dpkg -i ./cuttlefish-base_*_*64.deb || sudo apt-get install -f
+sudo dpkg -i ./cuttlefish-user_*_*64.deb || sudo apt-get install -f
+sudo dpkg -i ./cuttlefish-integration_*_*64.deb || sudo apt-get install -f
+sudo usermod -aG kvm,cvdnetwork,render $USER
+sudo reboot
+```
