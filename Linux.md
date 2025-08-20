@@ -180,8 +180,8 @@ sudo snap install just --classic
 手动安装下面的工具：
 
 ```bash
-wget https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-2.1.0-x64.AppImage
-chmod a+x balenaEtcher-2.1.0-x64.AppImage
+wget https://github.com/balena-io/etcher/releases/download/v2.1.4/balenaEtcher-linux-x64-2.1.4.zip
+unzip balenaEtcher-linux-*.zip
 
 wget https://www.sweetscape.com/download/010EditorLinux64Installer.tar.gz
 tar xvf 010EditorLinux64Installer.tar.gz
@@ -192,12 +192,12 @@ chmod a+x 010editor/010editor
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.3/Clash.Verge_2.2.3_amd64.deb
+wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.2/Clash.Verge_2.3.2_amd64.deb
 sudo dpkg -i ./Clash.Verge_*.deb
 
 wget https://github.com/shiftkey/desktop/releases/download/release-3.4.13-linux1/GitHubDesktop-linux-x86_64-3.4.13-linux1.AppImage
-wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250401_x86_64_01.AppImage   # https://im.qq.com/linuxqq/index.shtml
-wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.AppImage
+wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_x86_64_01.AppImage   # https://im.qq.com/linuxqq/index.shtml
+wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.AppImage # https://linux.weixin.qq.com/
 
 chmod a+x *.AppImage
 ```
