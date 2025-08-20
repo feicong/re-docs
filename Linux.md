@@ -40,7 +40,7 @@ visudo -cf /etc/sudoers.d/$(whoami)
 
 # Update apt sources list based on architecture
 if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "i686" ] || [ "$ARCH" = "x86" ]; then
-	tee /etc/apt/sources.list.d/ubuntu.sources <<EOF
+	sudo tee /etc/apt/sources.list.d/ubuntu.sources <<EOF
 
 Types: deb
 URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu
@@ -85,7 +85,7 @@ Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 EOF
 else
     sudo mv -f /etc/apt/sources.list /etc/apt/sources.list.bak || true
-	tee /etc/apt/sources.list.d/ubuntu.sources <<EOF
+	sudo tee /etc/apt/sources.list.d/ubuntu.sources <<EOF
 
 Types: deb
 URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports
