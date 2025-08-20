@@ -153,7 +153,7 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zi
     software-properties-common apt-file libdwarf-dev libgirepository1.0-dev x11-apps patchelf libjson-glib-dev \
     libsoup-3.0-dev libsqlite3-dev libunwind-dev gcc gdb tzdata socat ltrace strace \
     libtool-bin p7zip-full libc6-dev gnome-tweaks net-tools openssh-server \
-    neofetch dnsutils cloud-image-utils pahole gh
+    neofetch dnsutils cloud-image-utils pahole gh apt-transport-https
 ```
 
 一些工具使用snap下载最新版本.
@@ -171,6 +171,21 @@ sudo snap install just --classic
 手动安装下面的工具：
 
 ```bash
+echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
+sudo apt-get install wget gpg apt-transport-https -y
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg
+rm -f microsoft.gpg
+echo  '
+Types: deb
+URIs: https://packages.microsoft.com/repos/code
+Suites: stable
+Components: main
+Architectures: amd64,arm64,armhf
+Signed-By: /usr/share/keyrings/microsoft.gpg
+' | sudo tee -a /etc/apt/sources.list.d/vscode.sources
+sudo apt update && sudo apt install code -y
+
 wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.2/Clash.Verge_2.3.2_arm64.deb
 sudo dpkg -i ./Clash.Verge_*.deb
 
