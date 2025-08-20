@@ -171,6 +171,7 @@ sudo snap install just --classic
 手动安装下面的工具：
 
 ```bash
+# https://code.visualstudio.com/docs/setup/linux
 echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
 sudo apt-get install wget gpg apt-transport-https -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
