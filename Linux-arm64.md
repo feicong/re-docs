@@ -466,3 +466,11 @@ ulimit -n 100000
 ```bash
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 ```
+
+### 配置不同版本内核
+
+```bash
+sudo add-apt-repository ppa:cappelikan/ppa -y
+sudo apt update && sudo apt install mainline -y
+sudo mainline install 6.6.0
+```

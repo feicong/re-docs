@@ -481,9 +481,10 @@ ulimit -n 100000
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 ```
 
-### 设置显示分辨率
+### 配置不同版本内核
 
 ```bash
-xrandr
-xrandr --output HDMI-1 --mode 1920x1080
+sudo add-apt-repository ppa:cappelikan/ppa -y
+sudo apt update && sudo apt install mainline -y
+sudo mainline install 6.6.0
 ```
