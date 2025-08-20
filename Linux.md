@@ -486,5 +486,5 @@ echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 ```bash
 sudo add-apt-repository ppa:cappelikan/ppa -y
 sudo apt update && sudo apt install mainline -y
-sudo mainline install 6.6.0
+sudo mainline install 6.6
 ```
