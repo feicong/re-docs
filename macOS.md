@@ -36,8 +36,10 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebr
 
 ```bash
 brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
-    llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@17 \
-    kotlin kotlin-native go perl gradle maven pipx vim cmake oracle-jdk oracle-jdk@17
+    llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@21 \
+    kotlin kotlin-native go perl gradle maven pipx vim cmake
+
+sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
 ```
 
 
@@ -95,7 +97,7 @@ export PATH=$PATH:$ANDROID_NDK_ROOT
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:/Applications/010 Editor.app/Contents/CmdLine:/opt/homebrew/bin"
 ```
