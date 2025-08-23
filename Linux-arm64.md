@@ -260,7 +260,7 @@ sudo snap install android-studio --classic
 
 ### Java配置
 
-选择17版本的。
+选择Java版本。
 
 ```
 sudo update-alternatives --config java
