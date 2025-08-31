@@ -81,7 +81,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler postman ghidra `
     python3 python311 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome `
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader `
-    androidstudio openjdk openjdk17 oracle17jdk notepadplusplus vlc nodejs nvm qemu angryip cmake `
+    androidstudio microsoft-openjdk openjdk17 notepadplusplus vlc nodejs nvm qemu angryip cmake `
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract `
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop microsoft-windows-terminal `
     plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
