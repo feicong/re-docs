@@ -43,8 +43,16 @@ sc stop wuauserv
 
 ### 启动系统保护
 
-```bash
+```powershell
 Enable-ComputerRestore -Drive "C:\"
+```
+
+### 开启开发者模式
+
+```powershell
+# 以管理员身份运行
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowDevelopmentWithoutDevLicense" -Value 1
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowAllTrustedApps" -Value 1
 ```
 
 ## 安全研究常用工具
