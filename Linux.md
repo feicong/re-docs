@@ -172,6 +172,7 @@ sudo snap install code --classic
 sudo snap install protobuf --classic
 sudo snap install postman --classic
 sudo snap install just --classic
+sudo snap install sqlitebrowser --classic
 ```
 
 手动安装下面的工具：
