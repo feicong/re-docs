@@ -86,7 +86,7 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler po
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop microsoft-windows-terminal `
     plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
     upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie imagemagick `
-    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup cursoride claude rustrover -y
+    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup cursoride claude rustrover sqlitebrowser -y
 ```
 
 > Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
