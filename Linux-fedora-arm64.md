@@ -477,4 +477,13 @@ virt-customize -a noble-server-cloudimg-arm64-120G.img \
 ```bash
 sudo modprobe virtio_net
 qemu-system-aarch64 -accel kvm  -m 4500M -cpu max -smp 4 -M virt -nographic -pflash flash1.img -drive if=none,file=noble-server-cloudimg-arm64-120G.img,format=qcow2,id=hd0 -device virtio-blk-device,drive=hd0 -netdev user,id=net0,hostfwd=tcp::5555-:22 -device virtio-net-device,netdev=net0,mac=00:16:3e:68:02:5d
+...
+android@ sudo chmod 0600 /etc/netplan/00-installer-config.yaml
+android$ cat /etc/netplan/00-installer-config.yaml
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+sudo netplan apply
 ```
