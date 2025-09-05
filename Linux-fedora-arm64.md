@@ -274,6 +274,8 @@ emulator -avd my_avd -no-snapshot -no-window -no-audio
 
 启动测试：
 
+参考：https://www.reddit.com/r/AsahiLinux/comments/1gxzcbh/android_emulatoravd_not_working_yet_on_asahi_linux/
+
 ```bash
 emulator -avd my_avd -no-snapshot -no-window -no-audio -gpu swiftshader_indirect -accel on
 INFO         | Android emulator version 35.6.3.0 (build_id 13288691) (CL:N/A)
