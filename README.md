@@ -8,7 +8,11 @@
 
 ### [安全研究员的Windows配置完全指南](Windows.md)
 
-### [安全研究员的Linux配置完全指南](Linux.md)
+### [安全研究员的Ubuntu配置完全指南](Linux.md)
+
+### [安全研究员的ARM开发板配置完全指南](Linux-arm64.md)
+
+### [安全研究员的Fedora配置完全指南](Linux-fedora-arm64.md)
 
 ## Lua程序逆向分析
 
