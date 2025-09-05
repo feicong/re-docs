@@ -156,7 +156,7 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zi
     libgee-0.8-dev libsoup2.4-dev libgstreamerd-3-dev gtk-3-examples libgtk-3-bin libgtk-3-common libgtk-3-dev \
     gtk-4-examples libgtk-4-bin libgtk-4-common libgtk-4-dev libvala-*dev tzdata iputils-ping socat ltrace strace \
     libtool-bin p7zip-full libc6-dev fuse docker.io docker-buildx docker-compose gnome-tweaks net-tools openssh-server \
-    neofetch libfuse2 libfuse3-dev dnsutils cloud-image-utils qemu-utils genisoimage pahole
+    neofetch libfuse2 libfuse3-dev dnsutils cloud-image-utils qemu-utils genisoimage pahole libguestfs-tools
 ```
 
 一些工具使用snap下载最新版本.

@@ -53,7 +53,8 @@ sudo dnf install curl wget make upx vim openssl adb fastboot gh git git-lfs cmak
     shared-mime-info dbus lzip ffmpeg file flac tcpdump fontconfig texinfo gawk ca-certificates gettext \
     unifdef sed gnupg gperf z3 zstd p7zip binwalk maven lsb-release patchelf gcc gdb tzdata socat \
     ltrace strace gnome-tweaks net-tools openssh-server dnsutils pahole protobuf node go just docker \
-    wireshark qemu bridge-utils qemu-kvm libzip fzf htop java-21-openjdk mesa-vulkan-drivers vulkan-loader vulkan-tools -y
+    wireshark qemu bridge-utils qemu-kvm libzip fzf htop java-21-openjdk libguestfs-tools guestfs-tools \
+    mesa-vulkan-drivers vulkan-loader vulkan-tools -y
 ```
 
 手动安装下面的工具：
@@ -447,4 +448,33 @@ Accelerators supported in QEMU binary:
 xen
 kvm
 tcg
+
+# 卒！ 参考：https://gitlab.com/libvirt/libvirt/-/issues/365
+```
+
+### Ubuntu虚拟化
+
+配置：
+
+```bash
+wget https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-arm64.img
+qemu-img resize noble-server-cloudimg-arm64.img 120G
+qemu-img create -f qcow2 noble-server-cloudimg-arm64-120G.img 120G
+virt-resize --expand /dev/sda1 noble-server-cloudimg-arm64.img noble-server-cloudimg-arm64-120G.img
+
+virt-customize -a noble-server-cloudimg-arm64-120G.img --root-password password:android
+virt-customize -a noble-server-cloudimg-arm64-120G.img \
+    --run-command "useradd -m -s /bin/bash android" \
+  --run-command "echo 'android:android' | chpasswd" \
+  --run-command "usermod -aG sudo android"
+
+```
+
+启动：
+
+参考： https://gist.github.com/itzurabhi/a760155c28c0e34ebb14ccf10f08d47b
+
+```bash
+sudo modprobe virtio_net
+qemu-system-aarch64 -accel kvm  -m 4500M -cpu max -smp 4 -M virt -nographic -pflash flash1.img -drive if=none,file=noble-server-cloudimg-arm64-120G.img,format=qcow2,id=hd0 -device virtio-blk-device,drive=hd0 -netdev user,id=net0,hostfwd=tcp::5555-:22 -device virtio-net-device,netdev=net0,mac=00:16:3e:68:02:5d
 ```

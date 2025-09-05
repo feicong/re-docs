@@ -153,7 +153,7 @@ sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zi
     software-properties-common apt-file libdwarf-dev libgirepository1.0-dev x11-apps patchelf libjson-glib-dev \
     libsoup-3.0-dev libsqlite3-dev libunwind-dev gcc gdb tzdata socat ltrace strace \
     libtool-bin p7zip-full libc6-dev gnome-tweaks net-tools openssh-server \
-    neofetch dnsutils cloud-image-utils pahole gh apt-transport-https
+    neofetch dnsutils cloud-image-utils pahole gh apt-transport-https libguestfs-tools
 ```
 
 一些工具使用snap下载最新版本.
