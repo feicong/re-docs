@@ -447,8 +447,6 @@ sudo mainline install 6.6
 
 ## 安装cuttlefish
 
-参考：https://github.com/google/android-cuttlefish/pull/1609/commits/6b22d7799201d17eb32a4528d5abe74efd2380a9
-
 ### 手动安装
 
 ```bash
