@@ -460,12 +460,3 @@ sudo dpkg -i ./cuttlefish-integration_*_*64.deb || sudo apt-get install -f
 sudo usermod -aG kvm,cvdnetwork,render $USER
 sudo reboot
 ```
-
-### 自动安装
-
-```bash
-curl https://us-apt.pkg.dev/doc/repo-signing-key.gpg | sudo apt-key add -
-echo "deb https://us-apt.pkg.dev/projects/android-cuttlefish-artifacts android-cuttlefish main" \
-    | sudo tee -a /etc/apt/sources.list.d/artifact-registry.list
-sudo apt install -y --no-install-recommends cuttlefish-base cuttlefish-user
-```
