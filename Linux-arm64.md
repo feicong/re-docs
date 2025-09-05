@@ -35,8 +35,8 @@ if [ "$OS_VERSION" != "noble" ]; then
     exit 1
 fi
 
-echo "$(whoami) ALL=(ALL) NOPASSWD:ALL" | tee /etc/sudoers.d/$(whoami)
-visudo -cf /etc/sudoers.d/$(whoami)
+echo "$(whoami) ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$(whoami)
+sudo visudo -cf /etc/sudoers.d/$(whoami)
 
 # Update apt sources list based on architecture
 if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "i686" ] || [ "$ARCH" = "x86" ]; then
@@ -141,7 +141,7 @@ sudo apt update && sudo apt upgrade -y
 
 ```bash
 sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zip build-essential cmake \
-    python3 python3-pip libpython3-dev openjdk-21-jdk upx flex bison make tree net-tools \
+    python3 python3-pip libpython3-dev openjdk-21-jdk upx bison make tree net-tools \
     ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby vim \
     graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli \
     jq repo reprepro quickjs coreutils libarchive-dev scrcpy httpie lz4 shared-mime-info dbus lzip \
@@ -187,10 +187,10 @@ Signed-By: /usr/share/keyrings/microsoft.gpg
 ' | sudo tee -a /etc/apt/sources.list.d/vscode.sources
 sudo apt update && sudo apt install code -y
 
-wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.2/Clash.Verge_2.3.2_arm64.deb
+wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.1/Clash.Verge_2.4.1_arm64.deb
 sudo dpkg -i ./Clash.Verge_*.deb
 
-wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_arm64_01.AppImage # https://im.qq.com/linuxqq/index.shtml
+wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.19_250904_arm64_01.AppImage # https://im.qq.com/linuxqq/index.shtml
 wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_arm64.AppImage # https://linux.weixin.qq.com/
 
 chmod a+x *.AppImage
@@ -201,7 +201,9 @@ chmod a+x *.AppImage
 ```bash
 sudo usermod -aG docker $USER
 newgrp docker
+sudo mkdir -p /etc/docker
 sudo vim /etc/docker/daemon.json
+
 {
   "registry-mirrors": [
       "https://docker.1ms.run",
@@ -229,43 +231,13 @@ pip3 install --upgrade pip
 
 ## 开发环境配置
 
-支持snapd安装方式与手动安装方式。
-
-### 手动配置安装
-
-下载地址：[https://developer.android.com/?hl=zh-cn](https://developer.android.com/?hl=zh-cn)
-
-```bash
-wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.1.2.12/android-studio-2025.1.2.12-linux.tar.gz
-sudo tar -xvzf android-studio-*.tar.gz -C /opt/
-/opt/android-studio/bin/studio.sh
-```
-
-接下来安装，Android SDK和NDK。可以在Android Studio手动安装或者命令行安装。
-
-```bash
-mkdir -p $HOME/Android/Sdk
-wget https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip -O cmdline-tools.zip
-unzip cmdline-tools.zip -d $HOME/Android/Sdk
-mv $HOME/Android/sdk/cmdline-tools $HOME/Android/Sdk/cmdline-tools-latest
-mkdir -p $HOME/Android/Sdk/cmdline-tools
-mv $HOME/Android/sdk/cmdline-tools-latest $HOME/Android/Sdk/cmdline-tools/latest
-```
-
-### 自动配置安装
-
-```bash
-sudo snap install android-studio --classic
-```
-
 ### Java配置
 
 选择Java版本。
 
-```
+```bash
 sudo update-alternatives --config java
 ```
-
 
 ### 环境变量配置
 
@@ -294,7 +266,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 source ~/.bashrc
 ```
 
-
 ## 逆向分析工具
 
 ### 反编译和调试工具
@@ -310,7 +281,7 @@ pip3 install frida-tools --break-system-packages
 - Ghidra 安装：
 
 ```bash
-wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.1_build/ghidra_11.4.1_PUBLIC_20250731.zip
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.2_build/ghidra_11.4.2_PUBLIC_20250826.zip
 unzip ghidra_*.zip -d $HOME/tools
 ```
 
@@ -330,7 +301,6 @@ gh auth login
 
 参考[macOS的vscode配置](https://github.com/feicong/re-docs/blob/master/macOS.md#vscode%E9%85%8D%E7%BD%AE)
 
-
 ### golang
 
 ```bash
@@ -342,8 +312,8 @@ go env -w GOPROXY=https://goproxy.cn,direct
 设置pip的mirror。
 
 ```bash
-pip install -U pip --break-system-packages
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+pip install -U pip --break-system-packages
 ```
 
 ### npm

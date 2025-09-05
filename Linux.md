@@ -35,8 +35,8 @@ if [ "$OS_VERSION" != "noble" ]; then
     exit 1
 fi
 
-echo "$(whoami) ALL=(ALL) NOPASSWD:ALL" | tee /etc/sudoers.d/$(whoami)
-visudo -cf /etc/sudoers.d/$(whoami)
+echo "$(whoami) ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$(whoami)
+sudo visudo -cf /etc/sudoers.d/$(whoami)
 
 # Update apt sources list based on architecture
 if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "i686" ] || [ "$ARCH" = "x86" ]; then
@@ -142,7 +142,7 @@ sudo add-apt-repository ppa:wireshark-dev/stable -y
 
 ```bash
 sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zip build-essential cmake \
-    python3 python3-pip libpython3-dev openjdk-21-jdk openjdk-17-jdk upx wireshark flex bison make tree net-tools \
+    python3 python3-pip libpython3-dev openjdk-21-jdk openjdk-17-jdk upx wireshark bison make tree net-tools \
     ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby valac kotlin vim \
     graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli qemu-user qemu-system \
     jq repo reprepro quickjs coreutils libarchive-dev scrcpy httpie lz4 shared-mime-info dbus lzip \
@@ -190,11 +190,11 @@ chmod a+x 010editor/010editor
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.3.2/Clash.Verge_2.3.2_amd64.deb
+wget https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.4.1/Clash.Verge_2.4.1_amd64.deb
 sudo dpkg -i ./Clash.Verge_*.deb
 
 wget https://github.com/shiftkey/desktop/releases/download/release-3.4.13-linux1/GitHubDesktop-linux-x86_64-3.4.13-linux1.AppImage
-wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_x86_64_01.AppImage   # https://im.qq.com/linuxqq/index.shtml
+wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.19_250904_x86_64_01.AppImage   # https://im.qq.com/linuxqq/index.shtml
 wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.AppImage # https://linux.weixin.qq.com/
 
 chmod a+x *.AppImage
@@ -213,7 +213,9 @@ xhost +
 ```bash
 sudo usermod -aG docker $USER
 newgrp docker
+sudo mkdir -p /etc/docker
 sudo vim /etc/docker/daemon.json
+
 {
   "registry-mirrors": [
       "https://docker.1ms.run",
@@ -246,10 +248,11 @@ pip3 install --upgrade pip
 
 ### 手动配置安装
 
-下载地址：[https://developer.android.com/?hl=zh-cn](https://developer.android.com/?hl=zh-cn)
+下载地址：[https://developer.android.com/studio?hl=zh-cn](https://developer.android.com/studio?hl=zh-cn)
 
 ```bash
-wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.3.1.14/android-studio-2024.3.1.14-linux.tar.gz
+curl https://developer.android.com/studio?hl=zh-cn | grep tar.gz
+wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.1.3.7/android-studio-2025.1.3.7-linux.tar.gz
 sudo tar -xvzf android-studio-*.tar.gz -C /opt/
 /opt/android-studio/bin/studio.sh
 ```
@@ -275,10 +278,9 @@ sudo snap install android-studio --classic
 
 选择17版本的。
 
-```
+```bash
 sudo update-alternatives --config java
 ```
-
 
 ### 环境变量配置
 
@@ -303,10 +305,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 
 生效：
 
-```
+```bash
 source ~/.bashrc
 ```
-
 
 ## 逆向分析工具
 
@@ -323,8 +324,8 @@ pip3 install frida-tools --break-system-packages
 - Ghidra 安装：
 
 ```bash
-wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.3.1_build/ghidra_11.3.1_PUBLIC_20250219.zip
-unzip ghidra_11.3.1_PUBLIC_20250219.zip -d $HOME/tools
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4.2_build/ghidra_11.4.2_PUBLIC_20250826.zip
+unzip ghidra_*.zip -d $HOME/tools
 ```
 
 ## 配置
@@ -355,8 +356,8 @@ go env -w GOPROXY=https://goproxy.cn,direct
 设置pip的mirror。
 
 ```bash
-pip install -U pip --break-system-packages
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+pip install -U pip --break-system-packages
 ```
 
 ### npm
