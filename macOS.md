@@ -18,7 +18,7 @@ Apple M4 Pro为演示配置的环境，收到机器后，开机然后开始设�
 /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/master/install.sh)"
 ```
 
-下载软件可能有时候不能成功，执行如下命令设置一下代理。
+下载软件可能有时候不能成功，执行如下命令设置一下代理。更多软件的加速配置见后面相关小节。
 
 ```bash
 echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"' >> ~/.zprofile
@@ -54,7 +54,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
     gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf websocat imhex
+    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc
 ```
 
 ### 配置x11
@@ -126,9 +126,27 @@ export PATH="$PATH:/Applications/010 Editor.app/Contents/CmdLine:/opt/homebrew/b
 
 其中，还有大量的库是这些软件用到的依赖，还有一些是开发`vala`程序用到的，这里不一一介绍了。
 
-## 配置
+## 软件加速配置
 
-一些软件需要配置登陆与设置代理。
+一些软件需要配置登陆与设置代理，或者设置加速mirror。
+
+首先是自动化配置方法。
+
+```bash
+chsrc list
+chsrc set brew
+chsrc set ruby
+chsrc set pip
+chsrc set node
+chsrc set npm
+chsrc set nvm
+chsrc set perl
+chsrc set rust
+chsrc set rustup
+chsrc set java
+```
+
+后面小节将讲解如何手动设置。
 
 ### gh
 
