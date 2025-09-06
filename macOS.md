@@ -698,9 +698,9 @@ EOF
 ### UTM配置
 
 安装好程序后，下载Ubuntu镜像。地址可以点击界面的浏览UTM库，然后选择Ubuntu。
-目前最新下载地址是：[https://archive.org/download/ubuntu-20.04-arm64-utm/ubuntu-20.04-arm64-utm.zip](https://archive.org/download/ubuntu-20.04-arm64-utm/ubuntu-20.04-arm64-utm.zip)
+目前最新下载地址是：[https://mac.getutm.app/gallery/](https://mac.getutm.app/gallery/)
 
-下载解压，然后双击Ubuntu22.04.utm，会自动导入。右链编译，改内存8g。
+下载解压，双击Ubuntu22.04.utm，会自动导入。右链编译，改内存8g。
 <img width="805" alt="image" src="https://github.com/user-attachments/assets/dd09d6e5-da8c-4c8f-a85c-bf59bba38a2e" />
 
 改共享，添加主机的下载目录，方便虚拟机与主机共享文件。
