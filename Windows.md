@@ -81,7 +81,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler postman ghidra `
     python3 python311 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome `
     vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader `
-    androidstudio microsoft-openjdk openjdk17 notepadplusplus vlc nodejs nvm qemu angryip cmake `
+    androidstudio temurin corretto21jdk notepadplusplus vlc nodejs nvm qemu angryip cmake `
     sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract `
     ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop microsoft-windows-terminal `
     plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
@@ -106,7 +106,7 @@ choco upgrade all -y
 ```powershell
 setx ANDROID_HOME "C:\Users\android\AppData\Local\Android\Sdk"
 setx ANDROID_NDK "%ANDROID_HOME%\ndk\28.0.12916984"
-setx JAVA_HOME "C:\Program Files\Java\jdk-17.0.2"
+setx JAVA_HOME "C:\Program Files\Java\jdk-21.0.2"
 ```
 
 下面的手动加到Path中去，如果使用setx设置错误，后果非常严重！
