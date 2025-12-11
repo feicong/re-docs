@@ -294,7 +294,7 @@ brew install --cask wireshark charles reqable postman httpie 1password disk-dril
     battery microsoft-auto-update viz pearcleaner pdf-expert hex-fiend cherry-studio claude cursor lulu \
     ios-app-signer motrix listen1 bit-slicer clash-verge-rev qingg logseq Snipaste licecap drawio syncthing \
     db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika gemini-cli Shottr pixel-picker \
-    drawpen yellowdot lunar thelowtechguys-cling
+    drawpen yellowdot lunar thelowtechguys-cling music-decoy
 
 brew install alienator88/homebrew-cask/sentinel-app
 ```
