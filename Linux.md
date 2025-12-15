@@ -174,6 +174,7 @@ sudo snap install postman --classic
 sudo snap install just --classic
 sudo snap install sqlitebrowser
 sudo snap install radare2 --classic
+sudo snap install iaito --classic
 ```
 
 手动安装下面的工具：
