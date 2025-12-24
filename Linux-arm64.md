@@ -141,19 +141,17 @@ sudo apt update && sudo apt upgrade -y
 
 ```bash
 sudo apt update && sudo apt install -y snapd git git-lfs curl wget axel unzip zip build-essential cmake \
-    python3 python3-pip libpython3-dev openjdk-21-jdk upx bison make tree net-tools \
-    ninja-build meson pkg-config libtool autoconf automake help2man llvm lua5.4 ruby vim \
+    python3 python3-pip libpython3-dev upx bison make tree net-tools \
+    ninja-build meson pkg-config libtool autoconf automake help2man llvm ruby vim \
     graphviz grep plantuml aria2 bash bash-completion bc binutils imagemagick brotli \
-    jq repo reprepro quickjs coreutils libarchive-dev scrcpy httpie lz4 shared-mime-info dbus lzip \
+    jq repo reprepro coreutils libarchive-dev httpie lz4 shared-mime-info dbus lzip \
     android-sdk-libsparse-utils libelf-dev libevent-dev ffmpeg libffi-dev file flac tcpdump flex \
-    fontconfig libncurses-dev libfreetype-dev texinfo libusbmuxd-dev gawk ca-certificates libmagic-dev \
-    gettext unifdef libnghttp2-dev libnghttp3-dev libnice-dev webp libpcap-dev sed libplist-dev gnupg \
-    libpng-dev openssl gperf z3 libslirp-dev zstd p7zip binwalk \
-    libcapstone-dev apktool smali gradle maven libzstd-dev libcurl4-openssl-dev libedit-dev lsb-release \
-    software-properties-common apt-file libdwarf-dev libgirepository1.0-dev x11-apps patchelf libjson-glib-dev \
-    libsoup-3.0-dev libsqlite3-dev libunwind-dev gcc gdb tzdata socat ltrace strace \
-    libtool-bin p7zip-full libc6-dev gnome-tweaks net-tools openssh-server \
-    neofetch dnsutils cloud-image-utils pahole gh apt-transport-https libguestfs-tools
+    fontconfig libncurses-dev texinfo libusbmuxd-dev gawk ca-certificates libmagic-dev \
+    gettext unifdef libpcap-dev sed libplist-dev gnupg openssl z3 libslirp-dev zstd \
+    lsb-release software-properties-common apt-file libdwarf-dev x11-apps patchelf \
+    libsqlite3-dev libunwind-dev gcc gdb tzdata socat strace libtool-bin p7zip-full libc6-dev \
+    gnome-tweaks net-tools openssh-server neofetch dnsutils cloud-image-utils pahole \
+    gh apt-transport-https libguestfs-tools
 ```
 
 一些工具使用snap下载最新版本.
