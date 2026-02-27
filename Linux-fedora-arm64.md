@@ -47,7 +47,7 @@ sudo dnf check-update
 ### 安装必备工具
 
 ```bash
-sudo dnf install curl wget make upx vim openssl adb fastboot gh git git-lfs cmake python3 python3-pip \
+sudo dnf install curl wget make upx vim openssl adb fastboot gh glab git git-lfs cmake python3 python3-pip \
     flex bison make tree net-tools ninja-build meson pkg-config libtool autoconf automake help2man llvm \
     grep plantuml aria2 bash bash-completion bc binutils brotli jq repo reprepro coreutils httpie lz4 \
     shared-mime-info dbus lzip ffmpeg file flac tcpdump fontconfig texinfo gawk ca-certificates gettext \
