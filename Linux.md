@@ -482,6 +482,64 @@ ulimit -n 100000
 echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 ```
 
+### 设置200%的4K显示优化
+
+```bash
+gnome_scale() {
+    local SCALE="$1"
+    if [ -z "$SCALE" ]; then
+        echo "usage: gnome_scale <scale>"
+        echo "example: gnome_scale 2"
+        return 1
+    fi
+
+    local UID_NUM
+    UID_NUM=$(id -u)
+
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${UID_NUM}/bus"
+
+    local STATE
+    STATE=$(gdbus call \
+        --session \
+        --dest org.gnome.Mutter.DisplayConfig \
+        --object-path /org/gnome/Mutter/DisplayConfig \
+        --method org.gnome.Mutter.DisplayConfig.GetCurrentState)
+
+    local SERIAL
+    SERIAL=$(echo "$STATE" | sed -E "s/^\(uint32 ([0-9]+),.*/\1/")
+
+    local CONNECTOR
+    CONNECTOR=$(echo "$STATE" | grep -oP "\('\K[^']+" | head -n1)
+
+    local MODE
+    MODE=$(echo "$STATE" | grep -oP "'[0-9]+x[0-9]+@[0-9.]+'" | head -n1 | tr -d "'")
+
+    echo "serial=$SERIAL"
+    echo "connector=$CONNECTOR"
+    echo "mode=$MODE"
+    echo "apply scale=$SCALE"
+
+    busctl --user call \
+        org.gnome.Mutter.DisplayConfig \
+        /org/gnome/Mutter/DisplayConfig \
+        org.gnome.Mutter.DisplayConfig \
+        ApplyMonitorsConfig \
+        "uua(iiduba(ssa{sv}))a{sv}" \
+        "$SERIAL" \
+        1 \
+        1 \
+        0 0 "$SCALE" 0 true \
+        1 \
+        "$CONNECTOR" "$MODE" \
+        0 \
+        0
+
+    echo "done"
+}
+
+gnome_scale 2
+```
+
 ### 配置不同版本内核
 
 ```bash
