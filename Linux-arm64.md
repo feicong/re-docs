@@ -169,6 +169,16 @@ sudo snap install iaito --classic
 sudo snap install gradle --classic
 ```
 
+上一步的go也可以换deb方式安装最新版本：
+
+参考：https://launchpad.net/~longsleep/+archive/ubuntu/golang-backports
+
+```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang -y
+```
+
 手动安装下面的工具：
 
 ```bash
