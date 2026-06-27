@@ -160,6 +160,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 
 export PATH=$PATH:$HOME/.npm/bin
 
+alias codexx='codex --dangerously-bypass-approvals-and-sandbox'
+alias claudex='claude --allowedTools=code,python,bash,browser,search,web,image,sql,http,git --dangerously-skip-permissions --permission-mode bypassPermissions'
+
 source ~/.profile
 ```
 
