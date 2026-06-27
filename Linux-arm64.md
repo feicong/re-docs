@@ -16,7 +16,6 @@
 
 [https://mirrors.ustc.edu.cn/ubuntu-cdimage/releases/24.04/release/ubuntu-24.04.3-desktop-arm64.iso](https://mirrors.ustc.edu.cn/ubuntu-cdimage/releases/24.04/release/ubuntu-24.04.3-desktop-arm64.iso)
 
-
 ## 基础环境配置
 
 首先配置系统的密码免输入与apt源加速：
@@ -217,12 +216,9 @@ sudo vim /etc/docker/daemon.json
 
 {
   "registry-mirrors": [
-      "https://docker.1ms.run",
+      "https://docker.m.daocloud.io",
       "https://docker.xuanyuan.me",
-      "https://dockerhub.timeweb.cloud",
-      "http://mirrors.ustc.edu.cn/",
-      "http://mirror.azure.cn/",
-      "https://docker.m.daocloud.io"
+      "https://dockerhub.timeweb.cloud"
     ]
 }
 ```
