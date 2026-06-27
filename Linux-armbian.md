@@ -1,4 +1,4 @@
-# 安全研究员的Linux配置完全指南
+# 安全研究员的Armbian配置完全指南
 
 文档最新更新请访问：[https://github.com/feicong/re-docs/edit/master/Linux-armbian.md](https://github.com/feicong/re-docs/edit/master/Linux-armbian.md)
 
@@ -98,9 +98,9 @@ sudo apt update && sudo apt install -y git git-lfs curl wget axel unzip zip buil
     fontconfig libncurses-dev texinfo libusbmuxd-dev gawk ca-certificates libmagic-dev \
     gettext unifdef libpcap-dev sed libplist-dev gnupg openssl z3 libslirp-dev zstd \
     lsb-release software-properties-common apt-file libdwarf-dev patchelf \
-    libsqlite3-dev libunwind-dev gcc gdb tzdata socat strace libtool-bin p7zip-full libc6-dev \
-    dnsutils cloud-image-utils pahole apt-transport-https libguestfs-tools \
-    gh glab witr fastfetch golang nodejs just gradle docker.io
+    libsqlite3-dev libunwind-dev gcc gdb tzdata socat strace libtool-bin 7zip libc6-dev \
+    cloud-image-utils pahole apt-transport-https libguestfs-tools \
+    gh glab witr fastfetch golang nodejs npm just gradle docker.io openjdk-21-jdk openjdk-25-jdk
 ```
 
 ### 配置docker
@@ -145,7 +145,7 @@ sudo update-alternatives --config java
 
 ### 环境变量配置
 
-添加环境变量到 `~/.bashrc`：
+添加环境变量到 `~/.profile`：
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-arm64
@@ -154,20 +154,13 @@ export PATH=$PATH:$JAVA_HOME/bin
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 
-export NDK_ROOT=$ANDROID_HOME/ndk/28.2.13676358
-export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/28.2.13676358
-export ANDROID_NDK=$ANDROID_HOME/ndk/28.2.13676358
-export PATH=$PATH:$ANDROID_NDK_ROOT
-
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
-```
 
-生效：
+export PATH=$PATH:$HOME/.npm/bin
 
-```bash
-source ~/.bashrc
+source ~/.profile
 ```
 
 ## 配置
@@ -198,8 +191,6 @@ pip install -U pip --break-system-packages
 ### npm
 
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 npm config set registry https://registry.npmmirror.com
 ```
 
@@ -207,13 +198,4 @@ npm config set registry https://registry.npmmirror.com
 
 ```bash
 npm install -g @anthropic-ai/claude-code @google/gemini-cli @openai/codex
-```
-
-## 其他优化
-
-### 提高文件打开数限制
-
-```bash
-echo "fs.file-max = 100000" | sudo tee -a /etc/sysctl.conf
-ulimit -n 100000
 ```
