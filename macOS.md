@@ -47,7 +47,7 @@ rm -rf brew-install
 ```bash
 brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
     llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@21 \
-    kotlin kotlin-native go perl gradle maven pipx vim cmake
+    kotlin kotlin-native go perl gradle maven pipx vim cmake -y
 
 sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
 ```
@@ -64,7 +64,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh glab unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
     gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc radare2 mole witr fastfetch
+    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc radare2 mole witr fastfetch -y
 ```
 
 ### 配置x11
