@@ -62,9 +62,9 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     sdl2 lz4 shared-mime-info dbus lzip simg2img dbus-glib docker-completion dtc dwarf mbedtls dwarfutils libedit sqlite libelf \
     libevent mitmproxy ffmpeg libffi file-formula libgcrypt flac libgee mpg123 tcpdump flex tesseract fontconfig ncurses tesseract-lang \
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh glab unifdef libnghttp2 unzip libnghttp3 \
-    libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
-    gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc radare2 mole witr fastfetch -y
+    libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl gnutls libpsl x265 x264 \
+     xz googletest pcre2 gperf z3 libslirp zip zstd p7zip ios-deploy binwalk upx XQuartz \
+    apktool jadx capstone mpv websocat chsrc mole witr fastfetch -y
 ```
 
 ### 配置x11
