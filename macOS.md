@@ -47,7 +47,7 @@ rm -rf brew-install
 ```bash
 brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
     llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@21 \
-    kotlin kotlin-native go perl gradle maven pipx vim cmake -y
+    kotlin go perl gradle maven pipx vim cmake -y
 
 sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
 ```
