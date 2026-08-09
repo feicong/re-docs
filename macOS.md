@@ -18,13 +18,7 @@ Apple M4 Pro为演示配置的环境，收到机器后，开机然后开始设�
 /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/master/install.sh)"
 ```
 
-或者科学方式：
-
-```bash
-git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
-/bin/bash brew-install/install.sh
-rm -rf brew-install
-```
+或者采用以下的科学方式。
 
 下载软件可能有时候不能成功，执行如下命令设置一下代理。更多软件的加速配置见后面相关小节。
 
@@ -33,6 +27,14 @@ echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/
 echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"' >> ~/.zprofile
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+```
+
+再安装Homebrew
+
+```bash
+git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
+/bin/bash brew-install/install.sh
+rm -rf brew-install
 ```
 
 ## 常用的命令行工具与库
@@ -62,7 +64,7 @@ brew install graphviz libsoup grep libsoup@2 plantuml gstreamer libssh2 aria2 ax
     freetype texinfo libimobiledevice gawk tree ca-certificates gdbm libmagic nspr ucl gettext gh glab unifdef libnghttp2 unzip libnghttp3 \
     libnice glib glib-networking webp libpcap openjpeg wget gnu-sed libplist gnupg libpng openssl openssl@1.1 gnutls libpsl x265 x264 \
     gobject-introspection xz googletest pcre2 gperf z3 libslirp zip libsodium zstd p7zip jtool2 ios-deploy binwalk upx XQuartz \
-    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc radare2 mole witr
+    apktool jadx capstone neofetch mpv windsurf websocat imhex chsrc radare2 mole witr fastfetch
 ```
 
 ### 配置x11
