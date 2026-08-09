@@ -18,6 +18,14 @@ Apple M4 Pro为演示配置的环境，收到机器后，开机然后开始设�
 /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/master/install.sh)"
 ```
 
+或者科学方式：
+
+```bash
+git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
+/bin/bash brew-install/install.sh
+rm -rf brew-install
+```
+
 下载软件可能有时候不能成功，执行如下命令设置一下代理。更多软件的加速配置见后面相关小节。
 
 ```bash
@@ -177,8 +185,6 @@ pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/si
 设置npm的mirror。
 
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 npm config set registry https://registry.npmmirror.com
 ```
 
