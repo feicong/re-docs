@@ -86,6 +86,14 @@ fi
 sudo apt update && sudo apt upgrade -y
 ```
 
+### 设备主机名
+
+```bash
+sudo hostnamectl set-hostname msr1
+sudo systemctl restart avahi-daemon
+avahi-resolve --name msr1.local
+```
+
 ### 安装必备工具
 
 ```bash
