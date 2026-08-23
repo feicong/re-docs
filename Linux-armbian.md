@@ -108,7 +108,8 @@ sudo apt update && sudo apt install -y git git-lfs curl wget axel unzip zip buil
     lsb-release software-properties-common apt-file libdwarf-dev patchelf \
     libsqlite3-dev libunwind-dev gcc gdb tzdata socat strace libtool-bin 7zip libc6-dev \
     cloud-image-utils pahole apt-transport-https libguestfs-tools \
-    gh glab witr fastfetch golang nodejs npm just gradle docker.io openjdk-21-jdk openjdk-25-jdk linux-firmware-mediatek
+    gh glab witr fastfetch golang nodejs npm just gradle docker.io openjdk-21-jdk openjdk-25-jdk \
+linux-firmware-mediatek linux-firmware-realtek linux-firmware-intel linux-firmware-broadcom
 ```
 
 ### 配置docker
