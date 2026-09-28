@@ -353,7 +353,6 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 ```bash
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-pip install -U pip --break-system-packages
 ```
 
 ### npm
@@ -361,15 +360,7 @@ pip install -U pip --break-system-packages
 设置npm的mirror。
 
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 npm config set registry https://registry.npmmirror.com
-```
-
-安装一些js工具。
-
-```bash
-npm install -g @anthropic-ai/claude-code @google/gemini-cli typescript
 ```
 
 ### maven
@@ -543,29 +534,4 @@ gnome_scale 2
 sudo add-apt-repository ppa:cappelikan/ppa -y
 sudo apt update && sudo apt install mainline -y
 sudo mainline install 6.6
-```
-
-## 安装cuttlefish
-
-参考：https://github.com/google/android-cuttlefish/pull/1609/commits/6b22d7799201d17eb32a4528d5abe74efd2380a9
-
-### 手动安装
-
-```bash
-tar xf debs.tar
-sudo dpkg -i ./cuttlefish-common_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-base_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-user_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-integration_*_*64.deb || sudo apt-get install -f
-sudo usermod -aG kvm,cvdnetwork,render $USER
-sudo reboot
-```
-
-### 自动安装
-
-```bash
-curl https://us-apt.pkg.dev/doc/repo-signing-key.gpg | sudo apt-key add -
-echo "deb https://us-apt.pkg.dev/projects/android-cuttlefish-artifacts android-cuttlefish main" \
-    | sudo tee -a /etc/apt/sources.list.d/artifact-registry.list
-sudo apt install -y --no-install-recommends cuttlefish-base cuttlefish-user
 ```
