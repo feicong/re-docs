@@ -45,11 +45,11 @@ rm -rf brew-install
 ### 编程语言与开发工具
 
 ```bash
-brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.11 qt \
-    llvm llvm@18 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@21 \
+brew install pkg-config poetry gtk+3 gtk4 libtool autoconf automake help2man pygobject3 python3 python@3.13 qt \
+    llvm llvm@22 ruby lua make meson ninja node npm gcc nvm vala vala-language-server git git-lfs openjdk openjdk@25 \
     kotlin go perl gradle maven pipx vim cmake -y
 
-sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+sudo ln -sfn /opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-25.jdk
 ```
 
 
