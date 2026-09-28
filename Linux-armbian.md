@@ -205,9 +205,3 @@ pip install -U pip --break-system-packages
 ```bash
 npm config set registry https://registry.npmmirror.com
 ```
-
-安装一些工具。
-
-```bash
-npm install -g @anthropic-ai/claude-code @google/gemini-cli @openai/codex
-```
