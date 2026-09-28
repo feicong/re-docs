@@ -298,7 +298,7 @@ brew install --cask -y wireshark charles reqable postman httpie 1password disk-d
     microsoft-office google-chrome xmind 010-editor showyedge displays \
     battery viz pdf-expert lulu ios-app-signer bit-slicer qingg licecap \
     macs-fan-control keyboardcleantool karabiner-elements pika Shottr \
-    drawpen yellowdot openinterminal impactor
+    drawpen yellowdot openinterminal impactor shichizip
 ```
 
 `wireshark`，`charles`还有`reqable`是抓包必备的。
