@@ -336,15 +336,7 @@ pip install -U pip --break-system-packages
 设置npm的mirror。
 
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 npm config set registry https://registry.npmmirror.com
-```
-
-安装一些js工具。
-
-```bash
-npm install -g @anthropic-ai/claude-code @google/gemini-cli typescript
 ```
 
 ### maven
@@ -458,18 +450,4 @@ echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 sudo add-apt-repository ppa:cappelikan/ppa -y
 sudo apt update && sudo apt install mainline -y
 sudo mainline install 6.6
-```
-
-## 安装cuttlefish
-
-### 手动安装
-
-```bash
-tar xf debs.tar
-sudo dpkg -i ./cuttlefish-common_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-base_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-user_*_*64.deb || sudo apt-get install -f
-sudo dpkg -i ./cuttlefish-integration_*_*64.deb || sudo apt-get install -f
-sudo usermod -aG kvm,cvdnetwork,render $USER
-sudo reboot
 ```
