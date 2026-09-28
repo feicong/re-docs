@@ -193,12 +193,6 @@ pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/si
 npm config set registry https://registry.npmmirror.com
 ```
 
-安装一些npm工具。
-
-```bash
-npm install -g @anthropic-ai/claude-code @google/gemini-cli typescript
-```
-
 ### maven
 
 ```bash
