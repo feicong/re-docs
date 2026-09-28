@@ -154,6 +154,9 @@ chsrc set perl
 chsrc set rust
 chsrc set rustup
 chsrc set java
+
+brew tap chen08209/tap
+brew install --cask flclash
 ```
 
 后面小节将讲解如何手动设置。
