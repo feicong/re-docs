@@ -292,12 +292,12 @@ JB系列有免费社区版本的，专业版本收费可以弄开源项目申请
 ### 通过brew安装
 
 ```bash
-brew install --cask wireshark charles reqable postman httpie 1password disk-drill windows-app displays \
+brew install --cask -y wireshark charles reqable postman httpie 1password disk-drill windows-app displays \
     flux utm balenaetcher vienna beyond-compare visual-studio-code github chatgpt \
     hiddenbar crescendo iina cryptomator itraffic iterm2 orbstack obs \
     microsoft-office google-chrome xmind localsend 010-editor wechat qq showyedge angry-ip-scanner \
     battery viz pdf-expert cursor lulu ios-app-signer bit-slicer qingg logseq Snipaste licecap drawio \
-    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika Shottr pixel-picker \
+    db-browser-for-sqlite macs-fan-control keyboardcleantool karabiner-elements pika Shottr \
     drawpen yellowdot lunar thelowtechguys-cling music-decoy openinterminal impactor
 ```
 
