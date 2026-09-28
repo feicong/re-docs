@@ -107,7 +107,7 @@ export PATH=$PATH:$ANDROID_NDK_ROOT
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-25.jdk/Contents/Home
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:/Applications/010 Editor.app/Contents/CmdLine:/opt/homebrew/bin"
 ```
