@@ -78,15 +78,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 安装软件：
 
 ```powershell
-choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler postman ghidra `
-    python3 python311 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome `
-    vscode etcher docker-desktop winrar peazip cpu-z gpu-z tree unzip zip diskgenius adobereader `
-    androidstudio temurin corretto21jdk notepadplusplus vlc nodejs nvm qemu angryip cmake `
-    sysinternals ninja vim openssl jq powertoys go everything checksum typescript tesseract `
-    ffmpeg msys2 vnc-viewer sqlite drawio autoruns llvm directx github-desktop microsoft-windows-terminal `
-    plantuml scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
-    upx usbimager logseq snipaste gradle maven libjpeg-turbo file flac gh webp httpie imagemagick `
-    intellijidea-community pycharm clion-ide ruby lua make kotlinc protoc pup cursoride claude rustrover sqlitebrowser -y
+choco install git git-lfs wget curl aria2 putty winscp fiddler postman ghidra `
+    python3 meson which sed grep awk 7zip 7zip-zstd wireshark fastcopy googlechrome `
+    vscode etcher docker-desktop winrar cpu-z gpu-z tree unzip zip diskgenius `
+    androidstudio temurin vlc nodejs nvm qemu cmake `
+    sysinternals ninja openssl jq powertoys go everything checksum tesseract `
+    ffmpeg msys2 vnc-viewer sqlite llvm directx microsoft-windows-terminal `
+    scrcpy f.lux sudo base64 zstandard apktool jadx patch gzip dos2unix dd fd xxd gnupg z3 `
+    upx usbimager snipaste gradle maven libjpeg-turbo file flac gh webp httpie imagemagick `
+    ruby lua make kotlinc protoc pup cursoride sqlitebrowser -y
 ```
 
 > Wireshark需要单独安装一下npcap： https://npcap.com/dist/npcap-1.81.exe
@@ -94,6 +94,7 @@ choco install motrix listen1 git git-lfs wget curl aria2 putty winscp fiddler po
 更新软件：
 
 ```
+choco outdated
 choco upgrade all -y 
 ```
 
@@ -285,111 +286,6 @@ pip install pwntools frida frida-tools requests scapy capstone unicorn
 ```powershell
 npm.cmd config set registry https://registry.npmmirror.com
 ```
-
-安装一些npm工具。
-
-```powershell
-npm.cmd install -g frida
-```
-
-### maven
-
-```powershell
-# 创建 .m2 目录（如果不存在）
-$env:USERPROFILE + "\.m2" | ForEach-Object { if (-not (Test-Path $_)) { New-Item -ItemType Directory -Path $_ } }
-
-# 写入 settings.xml 文件
-@'
-<?xml version="1.0" encoding="UTF-8"?> 
-<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="settings.xsd">
-    <mirrors>
-        <mirror>
-            <id>aliyunmaven</id>
-            <mirrorOf>*</mirrorOf>
-            <name>aliyun</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-        </mirror>
-
-        <mirror>
-            <id>huaweicloud</id>
-            <mirrorOf>*</mirrorOf>
-            <url>https://repo.huaweicloud.com/repository/maven/</url>
-        </mirror>
-
-        <mirror>
-            <id>nexus-163</id>
-            <mirrorOf>*</mirrorOf>
-            <name>Nexus 163</name>
-            <url>https://mirrors.163.com/maven/repository/maven-public/</url>
-        </mirror>
-
-        <mirror>
-            <id>nexus-tencentyun</id>
-            <mirrorOf>*</mirrorOf>
-            <name>Nexus tencentyun</name>
-            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
-        </mirror>
-    </mirrors>
-</settings>
-'@ | Set-Content -Path (Join-Path $env:USERPROFILE ".m2\settings.xml")
-```
-
-### gradle
-
-设置依赖mirror：
-
-```powershell
-@'
-fun RepositoryHandler.enableMirror() {
-    all {
-        if (this is MavenArtifactRepository) {
-            val originalUrl = this.url.toString().removeSuffix("/")
-            urlMappings[originalUrl]?.let {
-                logger.lifecycle("Repository[$url] is mirrored to $it")
-                this.setUrl(it)
-            }
-        }
-    }
-}
-
-val urlMappings = mapOf(
-    "https://repo.maven.apache.org/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
-    "https://dl.google.com/dl/android/maven2" to "https://mirrors.tencent.com/nexus/repository/maven-public/",
-    "https://plugins.gradle.org/m2" to "https://mirrors.tencent.com/nexus/repository/gradle-plugins/"
-)
-
-gradle.allprojects {
-    buildscript {
-        repositories.enableMirror()
-    }
-    repositories.enableMirror()
-}
-
-gradle.beforeSettings { 
-    pluginManagement.repositories.enableMirror()
-    dependencyResolutionManagement.repositories.enableMirror()
-}
-'@ | Set-Content -Path "C:\Users\android\.gradle\init.gradle.kts"
-```
-
-设置代理：
-
-```powershell
-$gradleDir = Join-Path $env:USERPROFILE ".gradle"
-if (-not (Test-Path $gradleDir)) {
-    New-Item -ItemType Directory -Path $gradleDir
-}
-
-# 写入 gradle.properties 文件
-@'
-# https://docs.gradle.org/current/userguide/networking.html
-systemProp.http.proxyHost=127.0.0.1
-systemProp.http.proxyPort=7890
-systemProp.https.proxyHost=127.0.0.1
-systemProp.https.proxyPort=7890
-'@ | Set-Content -Path (Join-Path $gradleDir "gradle.properties")
-```
-
 
 ### 安装 Visual Studio
 
